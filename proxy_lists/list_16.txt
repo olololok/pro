@@ -137,3 +137,12 @@ trojan://juzi@172.66.46.221:443?path=%2F&security=tls&host=juzi8186-sr1.pages.de
 ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpwNzhuYUNmMkVmT2xSU0xUWDB3RlZ4@71.19.148.143:443#%F0%9F%87%BA%F0%9F%87%B8US-71.19.148.143-0425
 trojan://e2722c0fb503f8a592436c12bce0509a@160.16.138.24:4054?sni=www.nintendogames.net#%F0%9F%87%BA%F0%9F%87%B8US%E7%BE%8E%E5%9B%BD
 trojan://lhW(t)kw)mdN@54.71.210.254:14792?security=tls&alpn=h2,http/1.1&type=tcp&sni=appsvs.shop&headerType=none#US|GithubTrojanLinks
+trojan://trojan@104.26.12.31:8443?security=tls&sni=fofang.pages.dev&allowInsecure=1&type=tcp#@Vip_Security join us - 596
+trojan://19f8e29a-3f0b-448c-92e8-ae035ea5f9ba@45.159.251.8:81?path=%2FFree-VPN-CF-Geo-Project%2F45.159.251.8%3D81&security=tls&host=joss.dus.biz.id&type=ws&sni=joss.dus.biz.id#@Vip_Security join us - 12
+vless://0417be58-2ea8-49de-8083-9eff9b0137e5@v2ray.codefyinc.com:443?path=%2Fvlessws&security=tls&encryption=none&host=v2ray.codefyinc.com&type=ws&sni=v2ray.codefyinc.com#@Vip_Security join us - 82
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@45.87.175.22:8080#US%20%20ROSE74
+vless://250d2d8c-ef8c-46eb-ac98-84e45a564fb7@185.85.241.196:33359?security=reality&encryption=none&pbk=ubSUt7iXFujZEKbMPuPXXYmbGf6tmlczDYX_Zr1_yhs&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=yahoo.com&sid=0863633bbb62#@Vip_Security join us - 494
+vless://53fff6cc-b4ec-43e8-ade5-e0c42972fc33@37.120.186.241:80?path=%2Fnews&security=&encryption=none&host=cdn.ir&type=ws#@Vip_Security join us - 21
+vless://53fff6cc-b4ec-43e8-ade5-e0c42972fc33@37.120.186.241:80?path=%2Fnews&security=none&encryption=none&host=cdn.ir&type=ws#@Vip_Security join us - 1316
+vless://53fa8faf-ba4b-4322-9c69-a3e5b1555049@156.238.18.127:8880?path=%2FTelegram%F0%9F%87%A8%F0%9F%87%B3&security=none&encryption=none&host=reedfree8mahsang2.redorg.ir&type=ws#@Vip_Security join us - 1303
+trojan://juzi@104.19.57.183:2096?security=tls&sni=juzi8186-sr1.pages.dev&type=tcp#@Vip_Security join us - 282

@@ -41,3 +41,8 @@ vless://596a828c-2eab-4d42-ab05-57049c4985b8@huskar.fonixapp.org:28705?security=
 trojan://bpb-trojan@23.227.60.8:443?security=tls&sni=403b3611-99bc-43b7-88D7-26Ed5D0825A9-3.paGeS.dev&type=tcp#@Vip_Security join us - 221
 ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M=@37.19.198.243:443#%F0%9F%87%BA%F0%9F%87%B8US-37.19.198.243-0663
 vmess://eyJ2IjogIjIiLCAicHMiOiAiUmVsYXlfLfCfh7rwn4e4VVNfMjM1IiwgImFkZCI6ICIxOTguMi4xOTguMTEiLCAicG9ydCI6IDQyMjg4LCAiYWlkIjogNjQsICJzY3kiOiAiYXV0byIsICJuZXQiOiAidGNwIiwgInR5cGUiOiAibm9uZSIsICJ0bHMiOiAiIiwgImlkIjogIjQxODA0OGFmLWEyOTMtNGI5OS05YjBjLTk4Y2EzNTgwZGQyNCJ9
+vmess://eyJhZGQiOiJwcS1icmF6aWwxLjA5dnBuLmNvbSIsImFpZCI6IjAiLCJhbHBuIjoiIiwiZnAiOiIiLCJob3N0IjoicHEtYnJhemlsMS4wOXZwbi5jb20iLCJpZCI6ImMwNGMzYjM0LTcwZmQtNGZlYy05NjNlLWMxMmQwOWYzNmJlZiIsIm5ldCI6IndzIiwicGF0aCI6Ii92bWVzcy8iLCJwb3J0IjoiODAiLCJwcyI6IkBWaXBfU2VjdXJpdHkgam9pbiB1cyAtIDY2NFxuIiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6IiIsInR5cGUiOiItLS0iLCJ2IjoiMiJ9
+trojan://bpb-trojan@104.26.5.60:443?peer=zamim340.ggff.net&plugin=obfs-local;obfs=websocket;obfs-host=zamim340.ggff.net;obfs-uri=/tr?ed=2560#United+States
+vless://47867494-9509-4c32-a90a-e9253b033279@65.109.180.241:443?path=%2F&security=none&encryption=none&host=cloudflare.com&type=ws#@Vip_Security join us - 868
+trojan://Watashi_VPN@104.17.147.22:443?path=%2F&security=tls&host=t-watashi-r-jacket-o-people-jan.watashi-java.ir&fp=chrome&type=ws&sni=t-watashi-r-jacket-o-people-jan.watashi-java.ir#@Vip_Security join us - 169
+vless://bf92bdef-ab8d-4481-8798-2d39023357b2@net2.intfreed.ru:443?security=reality&encryption=none&pbk=JxwG7rAbNCd_C82p9K69AZDWh51fri2nm3wLHHrfyiw&headerType=none&fp=qq&type=tcp&flow=xtls-rprx-vision&sni=video.intfreed.ru&sid=7755e972daf8eec8#@Vip_Security join us - 2620

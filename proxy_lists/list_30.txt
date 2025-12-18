@@ -42,3 +42,8 @@ ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo0YTJyZml4b3BoZGpmZmE4S1ZBNEFh@45.87.175.166:
 trojan://9yu6m5okr@104.21.50.5:443?security=tls&type=ws&sni=production.tj.ojan.workers.dev&path=/&host=production.tj.ojan.workers.dev#@Hope_Net-join-us-on-Telegram
 vmess://eyJ2IjogIjIiLCAicHMiOiAiUG9vbF/wn4e68J+HuFVTXzI4NiIsICJhZGQiOiAiMTkyLjc0LjI0MS40NCIsICJwb3J0IjogMzEyMTIsICJhaWQiOiA2NCwgInNjeSI6ICJhdXRvIiwgIm5ldCI6ICJ0Y3AiLCAidHlwZSI6ICJub25lIiwgInRscyI6ICIiLCAiaWQiOiAiNDE4MDQ4YWYtYTI5My00Yjk5LTliMGMtOThjYTM1ODBkZDI0In0=
 vless://2ee2a715-d541-416a-8713-d66567448c2e@91.98.39.30:443?mode=gun&security=&encryption=none&type=grpc#@Vip_Security join us - 583
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpjdklJODVUclc2bjBPR3lmcEhWUzF1@45.87.175.188:8080#US%20%20ROSE303
+vless://bc310b8d-fbe8-4c55-970b-be77816fceea@45.79.10.46:443?mode=stream-one&path=/&security=&encryption=none&type=xhttp#US_4943_@Surfboardv2ray
+trojan://c51d3975-a40c-4a5b-929b-c8595ed87850@15.168.28.231:443?allowInsecure=1&sni=wel-usgt.optage.moe#US_AzadNet%288%29
+vmess://eyJ2IjogIjIiLCAicHMiOiAiUmVsYXlf8J+HuvCfh7hVUy3wn4e68J+HuFVTXzE4MjEiLCAiYWRkIjogIjE0Mi4wLjEzOS41NSIsICJwb3J0IjogNTcwNzIsICJhaWQiOiA2NCwgInNjeSI6ICJhdXRvIiwgIm5ldCI6ICJ0Y3AiLCAidHlwZSI6ICJub25lIiwgInRscyI6ICIiLCAiaWQiOiAiNDE4MDQ4YWYtYTI5My00Yjk5LTliMGMtOThjYTM1ODBkZDI0In0=
+trojan://eDHWaPzxcl@145.223.70.115:25365/?type=grpc&sni=cloudflare.com&fp=chrome&security=reality&pbk=YaP997bVbPWOkNwZ-aKWVNHSdzQkZLzhTGjVRVC1u3I&sid=d9#@Vip_Security join us - 259

@@ -7,3 +7,8 @@ vmess://eyJhZGQiOiI0NS4xMzYuMTIuMzciLCJhaWQiOiIwIiwiYWxwbiI6IiIsImZwIjoiIiwiaG9z
 trojan://62b78c9b-16cb-4ee6-824b-a4f856cf18f3@transfer01.kaochangonline.online:443?#@Vip_Security join us - 65
 trojan://NISHIKUITAN222@104.16.199.201:443?#%F0%9F%87%BA%F0%9F%87%B8US%E7%BE%8E%E5%9B%BD7
 trojan://d3e663d2-5cce-56e1-a199-2fec6078fcb4@tgju.org:2096?path=trojan-ws%2F%3Fed&security=tls&host=mailbox.CpIfOrperSiA.UK&fp=chrome&type=ws&sni=mailbox.CpIfOrperSiA.UK#@Vip_Security join us - 241
+trojan://trojan@104.18.3.150:443?peer=main.xicun.us.kg&plugin=obfs-local;obfs=websocket;obfs-host=main.xicun.us.kg;obfs-uri=#United+States
+vmess://ew0KICAidiI6ICIyIiwNCiAgInBzIjogIlVT576O5Zu9KG1pYmVpNzcuY29tIOexs+i0neiKgueCueWIhuS6qykiLA0KICAiYWRkIjogIjgyLjE5OC4yNDYuOTciLA0KICAicG9ydCI6ICIxODAiLA0KICAiaWQiOiAiZDEzZmMyZjUtM2UwNS00Nzk1LTgxZWItNDQxNDNhMDllNTUyIiwNCiAgImFpZCI6ICIwIiwNCiAgInNjeSI6ICJhdXRvIiwNCiAgIm5ldCI6ICJ0Y3AiLA0KICAidHlwZSI6ICJub25lIiwNCiAgImhvc3QiOiAiaW1nMTQuMzYwYnV5aW1nLmNvbSIsDQogICJwYXRoIjogIi9vYmoiLA0KICAidGxzIjogIiIsDQogICJzbmkiOiAiIiwNCiAgImFscG4iOiAiIg0KfQ==
+vless://f61a4285-7264-4d07-9408-7b9ba1922c26@36.50.90.241:35951?path=%2FX%40%E8%8A%82%E7%82%B9%E7%8B%82%E9%AD%94%2F%3Fed%3D2560&security=tls&encryption=none&host=gaosir.unfeeling.sbs&type=ws&sni=gaosir.unfeeling.sbs#@Vip_Security join us - 3450
+vmess://eyJ2IjoiMiIsInBzIjoiVVNfMTQiLCJhZGQiOiIxNTkuMjIzLjMyLjIzMCIsInBvcnQiOiI4MDgwIiwidHlwZSI6Im5vbmUiLCJpZCI6IjcwMDIzMzBkLWZlMjctNGI1Ni1iMjJmLWQ3ZTNlYjgyNWZkYiIsImFpZCI6IjAiLCJuZXQiOiJ3cyIsInBhdGgiOiIvY2N0djEzL2hkLm0zdTgiLCJob3N0IjoiMTU5LjIyMy4zMi4yMzAiLCJ0bHMiOiIifQ==
+trojan://tg-dns68@162.159.152.217:443?security=tls&type=ws&sni=vip.putata.eu.org&host=vip.putata.eu.org#@Vip_Security join us - 588

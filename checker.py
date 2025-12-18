@@ -23,7 +23,7 @@ TARGET_WORKING_COUNT = 1000 # Stop after finding this many working proxies
 MAX_RUNTIME = 250 # Seconds (less than 5 mins) to ensure graceful exit and save
 QUEUE_FILE = "proxies_queue.txt" # File to store unchecked proxies
 RESULTS_FILE = "proxy_list_found.txt" # File to store working proxies (appended or overwritten)
-TOTAL_OUTPUT_LISTS = 40 # Number of separate lists to distribute proxies into
+TOTAL_OUTPUT_LISTS = 10 # Number of separate lists to distribute proxies into
 
 def parse_vmess(link):
     """Parse vmess:// link to Xray outbound config object."""

@@ -12,7 +12,7 @@ XRAY_BIN="/usr/local/bin/xray"
 
 TOTAL_STREAMS=10
 BASE_PORT=1080
-TOTAL_LISTS_COUNT=40
+TOTAL_LISTS_COUNT=10
 
 # Check for List ID Override (Argument 1)
 OVERRIDE_LIST_ID="$1"

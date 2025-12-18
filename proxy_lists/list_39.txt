@@ -36,3 +36,8 @@ trojan://trojan@109.234.211.66:8443?security=tls&sni=store.timimi.dpdns.org&type
 trojan://0e81a9cd-d849-4101-8d64-574c283207de@104.21.69.44:2083?encryption=none&security=tls&sni=de1.trojanvpn.de&type=ws&host=de1.trojanvpn.de&path=%2Fwebsocket#@Vip_Security join us - 5
 trojan://7cbeb900-1939-11f0-ae81-1239d0255272@51.38.65.155:443?security=tls&headerType=none&type=tcp&sni=tgju.org#@Vip_Security join us - 76
 trojan://d0298536-d670-4045-bbb1-ddd5ea68683e@104.25.254.4:2087?encryption=none&security=tls&sni=azadnet-bdr.pages.dev&type=ws&host=azadnet-bdr.pages.dev&path=%2Fazadnet-bdr.pages.dev%2F%3Fed%3D2560%26PROT_TYPE%3Dtrojan#@Vip_Security join us - 230
+trojan://iwangjie@141.94.68.216:2053?sni=nodes.830901.xyz#%F0%9F%87%BA%F0%9F%87%B8US%E7%BE%8E%E5%9B%BD10
+vless://596a828c-2eab-4d42-ab05-57049c4985b8@huskar.fonixapp.org:28705?security=reality&encryption=none&pbk=Bk2ghdUIo2U2JdU9oVlTyUcVp2_pLbqhqe58F7hcJEw&headerType=none&fp=chrome&spx=%2F&type=tcp&flow=xtls-rprx-vision&sni=canva.com&sid=ac#@Vip_Security join us - 1386
+trojan://bpb-trojan@23.227.60.8:443?security=tls&sni=403b3611-99bc-43b7-88D7-26Ed5D0825A9-3.paGeS.dev&type=tcp#@Vip_Security join us - 221
+ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M=@37.19.198.243:443#%F0%9F%87%BA%F0%9F%87%B8US-37.19.198.243-0663
+vmess://eyJ2IjogIjIiLCAicHMiOiAiUmVsYXlfLfCfh7rwn4e4VVNfMjM1IiwgImFkZCI6ICIxOTguMi4xOTguMTEiLCAicG9ydCI6IDQyMjg4LCAiYWlkIjogNjQsICJzY3kiOiAiYXV0byIsICJuZXQiOiAidGNwIiwgInR5cGUiOiAibm9uZSIsICJ0bHMiOiAiIiwgImlkIjogIjQxODA0OGFmLWEyOTMtNGI5OS05YjBjLTk4Y2EzNTgwZGQyNCJ9

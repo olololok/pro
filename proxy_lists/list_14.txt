@@ -213,3 +213,9 @@ trojan://936c6853-6bbf-4e24-8667-ec5b2fc275b3@104.26.14.85:443?peer=md1.safecdn.
 vless://88538870-5626-4cd7-9cda-1e0b6253c9ce@www.speedtest.net:443?path=%2F&security=tls&encryption=none&host=kalam.mrconfigur.site&type=ws&sni=kalam.mrconfigur.site#@Vip_Security join us - 1908
 trojan://juzi@104.19.57.183:2096?security=tls&sni=juzi8186-sr1.pages.dev&type=tcp#@Vip_Security join us - 282
 vless://4c26ebc3-7784-46d8-b52a-7b0ccae6f4b4@52.12.213.121:443?security=reality&encryption=none&pbk=TGlPtfVzGIVpMauPRMGJj2Uu6GUiCpu5ZizIIjw-wx4&headerType=none&fp=chrome&spx=%2F&type=tcp&flow=xtls-rprx-vision&sni=chatgpt.com&sid=f5#@Vip_Security join us - 1168
+vmess://eyJ2IjogIjIiLCAicHMiOiAi8J+HuvCfh7hVUy00NS44OS4xMDYuMTA2LTEyNS4uLiIsICJhZGQiOiAiNDUuODkuMTA2LjEwNiIsICJwb3J0IjogNDQzLCAiYWlkIjogMCwgInNjeSI6ICJhdXRvIiwgIm5ldCI6ICJ3cyIsICJ0eXBlIjogIm5vbmUiLCAidGxzIjogIiIsICJpZCI6ICJhMjBiMTYwYS01NTRlLTQzNGItYjRlMC1jMmMyMDRiMTg3MTMiLCAicGF0aCI6ICIvIn0=
+vless://d37d61da-e50d-4f7f-9969-7f0136f97953@delilah.ns.cloudflare.com:443?path=%2Ffwgisws&security=tls&encryption=none&host=hazmkardan.info&type=ws&sni=hazmkardan.info#@Vip_Security join us - 2808
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo0YTJyZml4b3BoZGpmZmE4S1ZBNEFh@45.87.175.178:8080#US%20%20ROSE25
+trojan://iwangjie@158.101.11.204:15805/?type=ws&path=%2F%3Fed%3D2560&security=tls&sni=nodes.830901.xyz#%F0%9F%87%BA%F0%9F%87%B8_US_%E7%BE%8E%E5%9B%BD
+trojan://WOeXShhJpL@104.18.71.140:443?security=tls&sni=09jzus.zdzdzd.xyz&type=ws&host=09jzus.zdzdzd.xyz&path=%2Fjuzigongyi#%F0%9F%87%BA%F0%9F%87%B8_US_%E7%BE%8E%E5%9B%BD-%3E%F0%9F%87%B0%F0%9F%87%B7_KR_%E9%9F%A9%E5%9B%BD
+vless://401374e6-df77-41fb-f638-dad8184f175b@185.236.232.77:80?mode=gun&security=none&encryption=none&type=grpc#@Vip_Security join us - 746

@@ -37,3 +37,8 @@ ss://YWVzLTI1Ni1nY206WEtGS2wyclVMaklwNzQ=@38.68.135.18:8009#%F0%9F%87%BA%F0%9F%8
 ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@ltnl10.saint.ydns.eu:8080#US%20%20ROSE593
 trojan://b10f2914-0401-4eff-ac4f-e430aeda0c45@172.64.33.100:443?security=tls&type=ws&sni=cfsg2.trojanwss.xyz&path=/CFJICHANG&host=cfsg2.trojanwss.xyz#@Vip_Security join us - 196
 trojan://bpb-trojan@162.159.152.2:443?peer=zamim340.ggff.net&plugin=obfs-local;obfs=websocket;obfs-host=zamim340.ggff.net;obfs-uri=/tr?ed=2560#United+States
+trojan://NISHIKUITAN222@104.19.71.183:443?#%F0%9F%87%BA%F0%9F%87%B8US%E7%BE%8E%E5%9B%BD5
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ@38.165.231.25:990#%F0%9F%87%BA%F0%9F%87%B8%20_US_%E7%BE%8E%E5%9B%BD
+vmess://ewogICAgImFkZCI6ICIxNDkuMzAuMjMyLjEwMyIsCiAgICAiYWlkIjogMCwKICAgICJob3N0IjogIiIsCiAgICAiaWQiOiAiMmMxODA3Y2UtNmE2My00NDUxLTlhZGQtYTc3OGQyNTA3MTYwIiwKICAgICJuZXQiOiAid3MiLAogICAgInBhdGgiOiAiL2Fya2k/ZWQ9MjA0OCIsCiAgICAicG9ydCI6IDE4MzkzLAogICAgInBzIjogIvCfh7rwn4e4VVMtMTQ5LjMwLjIzMi4xMDMtNTEyOCIsCiAgICAidGxzIjogIiIsCiAgICAidHlwZSI6ICJhdXRvIiwKICAgICJzZWN1cml0eSI6ICJhdXRvIiwKICAgICJza2lwLWNlcnQtdmVyaWZ5IjogdHJ1ZSwKICAgICJzbmkiOiAiIgp9
+trojan://936c6853-6bbf-4e24-8667-ec5b2fc275b3@104.26.14.85:443?peer=md1.safecdn.site&plugin=obfs-local;obfs=websocket;obfs-host=md1.safecdn.site;obfs-uri=/Telegram@FreeV2Alpha#United+States
+vless://4394eb25-5dfc-4bf1-a363-1ae168e200b9@151.101.25.242:80?mode=auto&path=/&security=none&encryption=none&host=jetde157.global.ssl.fastly.net&type=xhttp#US_2137_@Surfboardv2ray

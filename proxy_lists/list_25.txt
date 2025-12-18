@@ -37,3 +37,9 @@ trojan://Watashi_VPN@104.18.26.94:8443?path=%2F&security=tls&host=t-watashi-r-ja
 trojan://bpb-trojan@104.21.75.193:443?peer=bpb-hd.aaronchin.xyz&plugin=obfs-local;obfs=websocket;obfs-host=bpb-hd.aaronchin.xyz;obfs-uri=/tr?ed=2560#United+States
 vmess://eyJ2IjogIjIiLCAicHMiOiAiUmVsYXlfLfCfh7rwn4e4VVNfMTczIiwgImFkZCI6ICI0NS44OC4xNzYuMjIyIiwgInBvcnQiOiA0NzgxNSwgImFpZCI6IDY0LCAic2N5IjogImF1dG8iLCAibmV0IjogInRjcCIsICJ0eXBlIjogIm5vbmUiLCAidGxzIjogIiIsICJpZCI6ICI0MTgwNDhhZi1hMjkzLTRiOTktOWIwYy05OGNhMzU4MGRkMjQifQ==
 trojan://psycho@104.21.48.1:443?path=%2Ftr7m9KE73yqd6Htr2E%3Fed%3D2560&security=tls&alpn=http/1.1&host=psycho.suex12.ir&type=ws&sni=pSychO.sueX12.IR#@Vip_Security join us - 311
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpRQ1hEeHVEbFRUTUQ3anRnSFVqSW9q@45.87.175.167:8080#US%20%20ROSE188
+trojan://bpb-trojan@162.159.152.2:443?peer=zamim340.ggff.net&plugin=obfs-local;obfs=websocket;obfs-host=zamim340.ggff.net;obfs-uri=/tr?ed=2560#United+States
+vless://4c26ebc3-7784-46d8-b52a-7b0ccae6f4b4@54.186.86.151:443?security=reality&encryption=none&pbk=TGlPtfVzGIVpMauPRMGJj2Uu6GUiCpu5ZizIIjw-wx4&headerType=none&fp=chrome&spx=%2F&type=tcp&flow=xtls-rprx-vision&sni=chatgpt.com&sid=f5#@Vip_Security join us - 1198
+trojan://tg-dns68@162.159.153.31:443?security=tls&type=ws&sni=vip.putata.eu.org&path=/?ed=2560&host=vip.putata.eu.org#@Vip_Security join us - 593
+vless://7270612b-49f6-4b04-999c-34d8263da767@108.162.195.45:443?path=%2Faymdlws&security=tls&encryption=none&type=ws&sni=picassoo.info#@Vip_Security join us - 1690
+trojan://7cbeb900-1939-11f0-ae81-1239d0255272@51.38.65.155:443?security=tls&headerType=none&type=tcp&sni=tgju.org#@Vip_Security join us - 76

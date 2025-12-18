@@ -217,3 +217,9 @@ vless://telegram-id-Arfilter@www.speedtest.net:443?path=%2Ftelegram-ArV2ray,tele
 vmess://eyJ2IjogIjIiLCAicHMiOiAiUG9vbF/wn4e68J+HuFVTXzE4ODciLCAiYWRkIjogIjE5OC4yLjIwNS42NiIsICJwb3J0IjogMzA0MDIsICJhaWQiOiA2NCwgInNjeSI6ICJhdXRvIiwgIm5ldCI6ICJ0Y3AiLCAidHlwZSI6ICJub25lIiwgInRscyI6ICIiLCAiaWQiOiAiNDE4MDQ4YWYtYTI5My00Yjk5LTliMGMtOThjYTM1ODBkZDI0In0=
 ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M=@37.19.198.160:443#%F0%9F%87%BA%F0%9F%87%B8US-37.19.198.160-0665
 trojan://rYQPeFM3GuIQsqyY@fi-43da1ea7.xeovo.net:444?security=tls&headerType=none&type=tcp&sni=fi-43da1ea7.xeovo.net#@Vip_Security join us - 314
+ss://YWVzLTI1Ni1nY206OEpDc1Bzc2ZnUzh0aVJ3aU1saEFSZz09@15.204.247.49:12000#US%20%20ROSE94
+ss://YWVzLTI1Ni1nY206OEpDc1Bzc2ZnUzh0aVJ3aU1saEFSZz09@15.204.247.49:12000#US%20SS-12%20%7C%20free-nodes
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@38.165.231.25:990#%F0%9F%87%BA%F0%9F%87%B8_US_%E7%BE%8E%E5%9B%BD
+vmess://eyJhZGQiOiI4LjIxOC4xMDUuMTk2IiwiYWlkIjoiMCIsImhvc3QiOiIiLCJpZCI6IjkyNWJkYmY1LTcyYmUtNDQzNy1iZWJmLTQ0MWM2MTA4OWY2YiIsIm5hbWUiOiJcdTAwM2VcdTAwM2VAdjJub2Rlczo6SEsiLCJuZXQiOiJ0Y3AiLCJwYXRoIjoiLyIsInBvcnQiOjUyNzUyLCJwcyI6IkBWaXBfU2VjdXJpdHkgam9pbiB1cyAtIDdcbiIsInNraXAtY2VydC12ZXJpZnkiOnRydWUsInRscyI6IiIsInR5cGUiOiJub25lIiwidiI6IjIifQ==
+trojan://19f8e29a-3f0b-448c-92e8-ae035ea5f9ba@45.159.251.8:81?path=%2FFree-VPN-CF-Geo-Project%2F45.159.251.8%3D81&security=tls&host=joss.dus.biz.id&type=ws&sni=joss.dus.biz.id#@Vip_Security join us - 11
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@ltnl16.saint.ydns.eu:8080#US%20%20ROSE598

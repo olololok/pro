@@ -167,3 +167,14 @@ trojan://a5a3350e-6ea2-4e12-ae84-20db849ce1fc@94.131.114.50:81?path=%2F94.131.11
 vmess://eyJhZGQiOiIzOC4xMDcuMjM0LjU3IiwiYWlkIjoiMCIsImFscG4iOiIiLCJmcCI6IiIsImhvc3QiOiIiLCJpZCI6IjU2N2Y0YmU1LTEyYWItNDJlMS1iOGQ5LWRiNmZkMWZkZDMxYyIsIm5ldCI6IndzIiwicGF0aCI6Ii92bWVzcy8iLCJwb3J0IjoiODAiLCJwcyI6IkBWaXBfU2VjdXJpdHkgam9pbiB1cyAtIDQyM1xuIiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6IiIsInR5cGUiOiItLS0iLCJ2IjoiMiJ9
 vless://2ee2a715-d541-416a-8713-d66567448c2e@91.98.155.240:443?mode=gun&security=none&encryption=none&type=grpc#@Vip_Security join us - 592
 trojan://64de1de7-e3bb-3dc4-ab04-d1e601e18ac5@iplc.xiaohouzi.club:20011?security=tls&sni=iplc011.xiaohouzi.club#%F0%9F%87%BA%F0%9F%87%B8US-13.248.169.48-1452
+vmess://eyJhZGQiOiI4NS4xOTUuMTAxLjEyMiIsImFpZCI6IjAiLCJhbHBuIjoiIiwiZnAiOiIiLCJob3N0IjoiIiwiaWQiOiJmM2Q0MTY3ZS1iMTVlLTRlNDYtODJlOS05Mjg2ZWY5M2ZkYTciLCJuZXQiOiJ0Y3AiLCJwYXRoIjoiIiwicG9ydCI6IjQwODc4IiwicHMiOiJAVmlwX1NlY3VyaXR5IGpvaW4gdXMgLSAxNTdcbiIsInNjeSI6ImF1dG8iLCJzbmkiOiIiLCJ0bHMiOiIiLCJ0eXBlIjoibm9uZSIsInYiOiIyIn0=
+trojan://saMgiangGt@172.64.80.1:443?security=tls&type=grpc&sni=teo.history-paint.art#@Vip_Security join us - 318
+vless://4c26ebc3-7784-46d8-b52a-7b0ccae6f4b4@54.175.215.131:443?security=reality&encryption=none&pbk=TGlPtfVzGIVpMauPRMGJj2Uu6GUiCpu5ZizIIjw-wx4&headerType=none&fp=chrome&spx=%2F&type=tcp&flow=xtls-rprx-vision&sni=chatgpt.com&sid=f5#@Vip_Security join us - 1182
+vmess://eyJ2IjogIjIiLCAicHMiOiAi8J+HuvCfh7ggX1VTX+e+juWbvSA4IiwgImFkZCI6ICIyMy4yMjQuMTkxLjUiLCAicG9ydCI6IDQ0MywgImFpZCI6IDY0LCAic2N5IjogImF1dG8iLCAibmV0IjogIndzIiwgInR5cGUiOiAibm9uZSIsICJ0bHMiOiAidGxzIiwgImlkIjogIjQxODA0OGFmLWEyOTMtNGI5OS05YjBjLTk4Y2EzNTgwZGQyNCIsICJwYXRoIjogIi8ifQ==
+trojan://redfree8@104.17.148.22:80?path=%2FtrLwW5jwrnymnOdqki%3Fed%3D2560&security=none&host=redfree8-p1.pooriashop.ir&type=ws#@Vip_Security join us - 314
+vless://f4b69ef0-d4b9-4ad5-954e-0c98fc169fce@91.98.233.176:24199?security=none&encryption=none&headerType=none&type=tcp#@Vip_Security join us - 3419
+vmess://eyJ2IjogIjIiLCAicHMiOiAiUmVsYXkg8J+HuvCfh7ggVW5pdGVkIFN0YXRlcyAwNyBULi4uIiwgImFkZCI6ICJ2MDIuZ3V0aW5ndGluZy5jb20iLCAicG9ydCI6ICIzMDAwMCIsICJhaWQiOiAiMCIsICJzY3kiOiAiYXV0byIsICJuZXQiOiAid3MiLCAidHlwZSI6ICJub25lIiwgInRscyI6ICIiLCAiaWQiOiAiYjY0ZDg4MDYtMmFlZS00NjVhLThlNDgtMWUyOThkYjVmZDA0IiwgImhvc3QiOiAiZ3ouZmFzdGNsb3VkLmNsdWIiLCAicGF0aCI6ICIvYWNlYW1lZHYifQ==
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpjdklJODVUclc2bjBPR3lmcEhWUzF1@45.87.175.193:8080#US%20%20ROSE77
+trojan://telegram-id-privatevpns@15.237.7.247:22222?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk#@Vip_Security join us - 431
+trojan://tg-dns68@162.159.152.145:443?security=tls&type=ws&sni=vip.putata.eu.org&path=/?ed=2560&host=vip.putata.eu.org#@Vip_Security join us - 586
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo0YTJyZml4b3BoZGpmZmE4S1ZBNEFh@45.87.175.178:8080#US%20%20ROSE25

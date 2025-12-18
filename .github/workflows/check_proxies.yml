@@ -1,0 +1,59 @@
+name: Proxy Checker
+
+on:
+  schedule:
+    - cron: '*/5 * * * *' # Run every 5 minutes
+  workflow_dispatch:      # Allow manual trigger
+
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  check_proxies:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+
+    - name: Install Python Dependencies
+      run: |
+        pip install -r requirements.txt
+
+    - name: Install Xray-Core
+      run: |
+        # Download latest Xray core
+        wget -q -O Xray-linux-64.zip https://github.com/XTLS/Xray-core/releases/latest/download/Xray-linux-64.zip
+        unzip -o Xray-linux-64.zip
+        chmod +x xray
+        # Verify installation
+        ./xray version
+
+    - name: Run Proxy Checker
+      run: |
+        python checker.py
+
+    - name: Commit and Push Results
+      run: |
+        git config --global user.name 'github-actions[bot]'
+        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+        
+        # Add proxy list folder and the queue state file
+        git add proxy_lists/ proxies_queue.txt
+        
+        # Commit if there are changes
+        if git diff --staged --quiet; then
+          echo "No changes to commit."
+        else
+          git commit -m "Update proxies [$(date)]"
+          git push
+        fi

@@ -23,6 +23,7 @@ TARGET_WORKING_COUNT = 1000 # Stop after finding this many working proxies
 MAX_RUNTIME = 250 # Seconds (less than 5 mins) to ensure graceful exit and save
 QUEUE_FILE = "proxies_queue.txt" # File to store unchecked proxies
 RESULTS_FILE = "proxy_list_found.txt" # File to store working proxies (appended or overwritten)
+TOTAL_OUTPUT_LISTS = 40 # Number of separate lists to distribute proxies into
 
 def parse_vmess(link):
     """Parse vmess:// link to Xray outbound config object."""
@@ -316,20 +317,20 @@ def save_distributed(proxies):
     # Create directory if needed
     os.makedirs("proxy_lists", exist_ok=True)
     
-    # Open handles for 20 files
+    # Open handles for files
     files = {}
-    for i in range(1, 21):
+    for i in range(1, TOTAL_OUTPUT_LISTS + 1):
         files[i] = open(f"proxy_lists/list_{i}.txt", "a") # append mode
         
     try:
         for idx, proxy in enumerate(proxies):
-            file_idx = (idx % 20) + 1
+            file_idx = (idx % TOTAL_OUTPUT_LISTS) + 1
             files[file_idx].write(proxy + "\n")
     finally:
         for f in files.values():
             f.close()
             
-    print(f"Distributed {len(proxies)} proxies into 20 files in 'proxy_lists/'")
+    print(f"Distributed {len(proxies)} proxies into {TOTAL_OUTPUT_LISTS} files in 'proxy_lists/'")
 
 def main():
     start_time = time.time()

@@ -11,3 +11,4 @@ ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNToxUld3WGh3ZkFCNWdBRW96VTRHMlBn@ltnl14.saint.y
 vless://2ee2a715-d541-416a-8713-d66567448c2e@91.98.38.116:443?mode=gun&security=&encryption=none&type=grpc#@Vip_Security join us - 587
 trojan://FodSUXysuS@180.131.145.161:23274?mode=gun&security=reality&pbk=iX_s_-F07vtmJa8t81J6OBiVksCy0ZHRmXUMyw3l4Vw&fp=chrome&type=grpc&sni=cloudflare.com&sid=14#@Vip_Security join us - 135
 vless://95b1344a-2b59-419f-ab7d-2ff7e5c6aa34@91.98.93.136:443?mode=gun&security=none&encryption=none&type=grpc#@Vip_Security join us - 2080
+trojan://d0298536-d670-4045-bbb1-ddd5ea68683e@104.25.254.4:2087?security=tls&sni=azadnet-bdr.pages.dev&allowInsecure=1&type=tcp#@Vip_Security join us - 231

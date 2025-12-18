@@ -150,3 +150,14 @@ vmess://eyJ2IjoiMiIsInBzIjoi8J+HuvCfh7hfVVNf576O5Zu9XzlfMjMiLCJhZGQiOiIxMDguMTg2
 trojan://amclubs2024@198.62.62.4:443?peer=tr.amclub.us.kg&plugin=obfs-local;obfs=websocket;obfs-host=tr.amclub.us.kg;obfs-uri=#United+States
 trojan://trojan@104.26.12.31:8443?security=tls&sni=fofang.pages.dev&type=tcp#@Vip_Security join us - 597
 ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpjdklJODVUclc2bjBPR3lmcEhWUzF1@45.87.175.183:8080#US%20%20ROSE505
+trojan://Pooria@104.17.148.22:443?path=%2FtrPyOrWMfkHd15oxiI%3Fed%3D1520&security=tls&alpn=h2%2Chttp%2F1.1&host=301.pooriam.ir&fp=randomized&type=ws&sni=301.pOORiAm.ir#@Vip_Security join us - 157
+trojan://f2191442-1436-3d79-801e-80d8de896c73@104.21.66.223:443?sni=jp2-july.88888802.xyz#@Hope_Net-join-us-on-Telegram
+vless://197092b3-e995-48b7-a34b-d32eb75b62e1@194.150.166.134:17166?security=&encryption=none&headerType=none&type=tcp#@Vip_Security join us - 351
+trojan://0507fbcd-b983-43a7-8e1d-2c561960ad4f@54d-bd0d-c3f111d0b879.664.qzz.io:443?sni=54D-bD0D-c3F111D0b879.664.Qzz.Io#%F0%9F%87%BA%F0%9F%87%B8US%E7%BE%8E%E5%9B%BD2
+vmess://eyJ2IjogIjIiLCAicHMiOiAi8J+HuvCfh7hVU18xODI3IiwgImFkZCI6ICJoYXguc21lbHkuZXUub3JnIiwgInBvcnQiOiA4MCwgImFpZCI6IDAsICJzY3kiOiAiYXV0byIsICJuZXQiOiAid3MiLCAidHlwZSI6ICJub25lIiwgInRscyI6ICIiLCAiaWQiOiAiNTgzNDBiZjMtZDUxZC00NWUyLTg3YTgtZWZmYTc4ZTRiY2E2IiwgInNuaSI6ICJoYXguc21lbHkuZXUub3JnIiwgInBhdGgiOiAiL2hheDAyIn0=
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@45.87.175.35:8080#US%20%20ROSE87
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo0YTJyZml4b3BoZGpmZmE4S1ZBNEFh@45.87.175.192:8080#US%20%20ROSE26
+vless://e2097867-48f3-4f55-c550-ad7c7c340a67@151.101.3.8:80?mode=auto&path=%2F%40%58pnTeam----%40%58pnTeam----%40%58pnTeam----%40%58pnTeam----%40%58pnTeam----%40%58pnTeam----%40%58pnTeam----%40%58pnTeam----%40%58pnTeam----%40%58pnTeam----%40%58pnTeam----%40%58pnTeam----%40%58pnTeam----%40%58pnTeam----%40%58pnTeam----%40%58pnTeam&security=none&encryption=none&host=Mahsazxshop.org&type=xhttp#@Vip_Security join us - 3121
+vless://97b11ee6-a62a-4e60-839c-de974a155089@88.216.67.197:443?security=tls&sni=ttgju.org&type=ws&host=hj-de.ttgju.org&path=%2Fhajmi%3Fed%3D2560&alpn=http%2F1.1#@Hope_Net-join-us-on-Telegram
+vless://dc8eccdb-ecfa-435f-9ac1-5dc4882e7b51@162.19.228.119:80?security=none&type=ws&path=%2Fhttp#%F0%9F%87%BA%F0%9F%87%B8_US_%E7%BE%8E%E5%9B%BD
+trojan://dd2f25b4c70689de8bc0f7fa9d6591cb@160.16.89.176:702?security=tls&headerType=none&type=tcp&sni=www.nintendogames.net#@Vip_Security join us - 251

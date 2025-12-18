@@ -20,10 +20,10 @@ BASE_PORT = 20000
 
 # Staged Execution Config
 TARGET_WORKING_COUNT = 1000 # Stop after finding this many working proxies
-MAX_RUNTIME = 250 # Seconds (less than 5 mins) to ensure graceful exit and save
+MAX_RUNTIME = 1750 # Seconds (approx 29 mins) to match 30m schedule
 QUEUE_FILE = "proxies_queue.txt" # File to store unchecked proxies
 RESULTS_FILE = "proxy_list_found.txt" # File to store working proxies (appended or overwritten)
-TOTAL_OUTPUT_LISTS = 10 # Number of separate lists to distribute proxies into
+TOTAL_OUTPUT_LISTS = 5 # Number of separate lists to distribute proxies into
 
 def parse_vmess(link):
     """Parse vmess:// link to Xray outbound config object."""
@@ -259,8 +259,9 @@ def fetch_proxies():
     print("Fetching new proxies from sources...")
     links = set()
     
-    # CONFIGURATION
-    US_PROXY_URL = "https://raw.githubusercontent.com/sevcator/5ubscrpt10n/refs/heads/main/working/countries/United%20States.txt"
+    # Randomly select a list from 1 to 35 (excluding 36)
+    list_id = random.randint(1, 35)
+    US_PROXY_URL = f"https://raw.githubusercontent.com/sevcator/5ubscrpt10n/main/mini/m1n1-5ub-{list_id}.txt"
     
     urls = [US_PROXY_URL]
     
@@ -325,28 +326,46 @@ def save_queue(proxies):
     print(f"Saved {len(proxies)} proxies back to queue file.")
 
 def save_distributed(proxies):
-    # Distribute proxies into 20 files
-    # We will append to existing files if they exist, or create new ones
-    # But usually for a fresh run we might want to overwrite or just append
-    # The requirement is "дописывал почереди" (append in turn)
+    # Distribute proxies into 10 files
+    # Requirement: Avoid duplicates across ALL 10 lists
     
-    # Create directory if needed
     os.makedirs("proxy_lists", exist_ok=True)
     
-    # Open handles for files
-    files = {}
+    # 1. Read existing proxies from all 10 files to strict deduplication set
+    existing_proxies = set()
     for i in range(1, TOTAL_OUTPUT_LISTS + 1):
-        files[i] = open(f"proxy_lists/list_{i}.txt", "a") # append mode
-        
+        fname = f"proxy_lists/list_{i}.txt"
+        if os.path.exists(fname):
+            try:
+                with open(fname, 'r') as f:
+                    for line in f:
+                        line = line.strip()
+                        if line: existing_proxies.add(line)
+            except: pass
+
+    # 2. Filter new proxies
+    unique_new_proxies = [p for p in proxies if p not in existing_proxies]
+    
+    if not unique_new_proxies:
+        print("No new unique proxies to save (all duplicates).")
+        return
+
+    # 3. Append to files round-robin
+    files = {}
     try:
-        for idx, proxy in enumerate(proxies):
+        for i in range(1, TOTAL_OUTPUT_LISTS + 1):
+            files[i] = open(f"proxy_lists/list_{i}.txt", "a")
+
+        for idx, proxy in enumerate(unique_new_proxies):
             file_idx = (idx % TOTAL_OUTPUT_LISTS) + 1
             files[file_idx].write(proxy + "\n")
+            # Update local set to prevent dupes within this batch if any (though input 'proxies' is already unique)
+            
     finally:
         for f in files.values():
             f.close()
             
-    print(f"Distributed {len(proxies)} proxies into {TOTAL_OUTPUT_LISTS} files in 'proxy_lists/'")
+    print(f"Distributed {len(unique_new_proxies)} UNIQUE proxies into {TOTAL_OUTPUT_LISTS} files in 'proxy_lists/'")
 
 def main():
     start_time = time.time()

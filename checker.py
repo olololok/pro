@@ -340,12 +340,15 @@ def main():
         # print(f"Error: {XRAY_BIN} not found. Please install Xray-core.")
         # sys.exit(1)
 
-    # 1. Load Proxies (Queue or Fetch)
-    all_links = load_queue()
-    if not all_links:
-        all_links = fetch_proxies()
-        # Shuffle for randomness if just fetched
-        random.shuffle(all_links)
+    # 1. Load Proxies (Queue + Fetch)
+    queue_links = load_queue()
+    fetched_links = fetch_proxies()
+    
+    # Combine and deduplicate
+    all_links = list(set(queue_links + fetched_links))
+    
+    # Shuffle for randomness
+    random.shuffle(all_links)
     
     print(f"Total proxies to check: {len(all_links)}")
     if len(all_links) == 0:

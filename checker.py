@@ -282,8 +282,11 @@ def fetch_proxies():
                 # Extract lines
                 for line in content.splitlines():
                     line = line.strip()
-                    if line and (line.startswith("vmess://") or line.startswith("vless://") or 
-                                 line.startswith("trojan://") or line.startswith("ss://")):
+                    if line and (
+                        # line.startswith("vmess://") or 
+                        line.startswith("vless://") 
+                        # or line.startswith("trojan://") or line.startswith("ss://")
+                    ):
                         links.add(line)
         except Exception as e:
             print(f"Failed to fetch {url}: {e}")
@@ -347,6 +350,9 @@ def main():
     
     # Combine and deduplicate
     all_links = list(set(queue_links + fetched_links))
+    
+    # TEMP: Filter ONLY vless
+    all_links = [l for l in all_links if l.startswith("vless://")]
     
     # Shuffle for randomness
     random.shuffle(all_links)

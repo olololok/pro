@@ -12,3 +12,8 @@ vmess://eyJhZGQiOiJ2dS1tdW1iYWktMDEudm5vZGUuaW5mbyIsImFpZCI6IjAiLCJhbHBuIjoiIiwi
 vless://9c79aceb-4649-44ea-9698-b5e9ecf6d6da@156.229.161.107:10001?type=tcp&encryption=none&flow=xtls-rprx-vision&sni=www.icloud.com&fp=chrome&security=reality&pbk=4jNz4Bw-FZlaX-WtfAdwK0hegY28W_k8AttGd-7hZn4&sid=fb2c6678#US%20VLESS-45%20%7C%20free-nodes
 trojan://auto@104.21.72.108:443?peer=esetsecuritylicense1.cxlrazo.workers.dev&plugin=obfs-local;obfs=websocket;obfs-host=esetsecuritylicense1.cxlrazo.workers.dev;obfs-uri=/#United+States
 trojan://eDHWaPzxcl@145.223.70.115:25365/?type=grpc&sni=cloudflare.com&fp=chrome&security=reality&pbk=YaP997bVbPWOkNwZ-aKWVNHSdzQkZLzhTGjVRVC1u3I&sid=d9#@Vip_Security join us - 259
+ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M=@37.19.198.160:443#%F0%9F%87%BA%F0%9F%87%B8US-37.19.198.160-0665
+trojan://eDHWaPzxcl@145.223.70.115:25365?mode=gun&security=reality&pbk=YaP997bVbPWOkNwZ-aKWVNHSdzQkZLzhTGjVRVC1u3I&fp=chrome&type=grpc&sni=cloudflare.com&sid=d9#@Vip_Security join us - 260
+vless://d342d11e-d424-4583-b36e-524ab1f0afa4@www.fbi.gov:2095?encryption=none&security=none&type=ws&host=xijinpingnmsl.s4ar.workers.dev&path=%2F%3Fed%3D2560#@Vip_Security join us - 2750
+ss://YWVzLTI1Ni1nY206OEpDc1Bzc2ZnUzh0aVJ3aU1saEFSZz09@15.204.247.49:12000#US%20SS-12%20%7C%20free-nodes
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpmOGY3YUN6Y1BLYnNGOHAz@104.192.226.106:990#US%20%20ROSE79

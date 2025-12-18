@@ -180,3 +180,9 @@ trojan://Pooria@104.17.148.22:443?path=%2FtrPyOrWMfkHd15oxiI%3Fed%3D1520&securit
 ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpRQ1hEeHVEbFRUTUQ3anRnSFVqSW9q@45.87.175.181:8080#US%20%20ROSE70
 vless://2ee2a715-d541-416a-8713-d66567448c2e@91.99.82.11:443/?type=grpc&encryption=none&flow=#@Vip_Security join us - 605
 vmess://eyJhZGQiOiIxNS4yMzUuNDEuMjAwIiwiYWlkIjoiMCIsImFscG4iOiIiLCJmcCI6IiIsImhvc3QiOiIiLCJpZCI6IjU4ZmUxNTQyLTUyOTAtNDBhZC04MTVhLTc3NzA3YTgxYWZlNSIsIm5ldCI6IndzIiwicGF0aCI6Ii9JT2ViaExNaGwxQ1RiRkhiTDk1bXlmUlgyIiwicG9ydCI6IjgwIiwicHMiOiJAVmlwX1NlY3VyaXR5IGpvaW4gdXMgLSAyODZcbiIsInNjeSI6ImF1dG8iLCJzbmkiOiIiLCJ0bHMiOiIiLCJ0eXBlIjoiIiwidiI6IjIifQ==
+trojan://a5a3350e-6ea2-4e12-ae84-20db849ce1fc@94.131.114.50:81?path=%2F94.131.114.50%3D81&security=tls&host=joss.dus.biz.id&type=ws&sni=joss.dus.biz.id#@Vip_Security join us - 183
+vmess://eyJ2IjogIjIiLCAicHMiOiAi8J+HuvCfh7hfVVNf576O5Zu9XzYiLCAiYWRkIjogIjE0Mi4wLjEzMi4zOCIsICJwb3J0IjogNTAwMTUsICJhaWQiOiA2NCwgInNjeSI6ICJhdXRvIiwgIm5ldCI6ICJ0Y3AiLCAidHlwZSI6ICJub25lIiwgInRscyI6ICIiLCAiaWQiOiAiNDE4MDQ4YWYtYTI5My00Yjk5LTliMGMtOThjYTM1ODBkZDI0IiwgInNuaSI6ICIifQ==
+trojan://ee2bccd3-0f30-42d4-86d6-3d393ad230bd@135.148.148.4:80?security=tls&sni=us3.trojanvh.xyz#%F0%9F%87%BA%F0%9F%87%B8US-135.148.148.4-8970
+vless://3121850a-24aa-41f9-936d-dbdf10a3b31f@147.45.230.128:4443?security=reality&encryption=none&pbk=5XB_N3ATilH-6tp_MXht-84_y5YaJnx_Z7MbuY2otHE&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=github.com&sid=aa7e96542880027a#@Vip_Security join us - 647
+vmess://eyJhZGQiOiI0Ni4zLjI0LjIwMiIsImFpZCI6IjAiLCJpZCI6ImU1Y2U0MjVlLTBiODQtNDM1Yy1hZWU1LTlmOWVjYmUyY2IxNiIsIm5ldCI6InJhdyIsInBvcnQiOiIyMDAyMCIsInBzIjoiQFZpcF9TZWN1cml0eSBqb2luIHVzIC0gNTZcbiIsInNjeSI6ImF1dG8iLCJ0eXBlIjoibm9uZSIsInYiOiIyIn0=
+trojan://tg-dns68@162.159.152.145:443?security=tls&type=ws&sni=vip.putata.eu.org&path=/?ed=2560&host=vip.putata.eu.org#@Vip_Security join us - 586

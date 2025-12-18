@@ -12,6 +12,13 @@ XRAY_BIN="/usr/local/bin/xray"
 
 TOTAL_STREAMS=10
 BASE_PORT=1080
+TOTAL_LISTS_COUNT=40
+
+# Check for List ID Override (Argument 1)
+OVERRIDE_LIST_ID="$1"
+if [ -n "$OVERRIDE_LIST_ID" ]; then
+    echo "[*] FORCED MODE: Using Proxy List #$OVERRIDE_LIST_ID for ALL streams." | tee -a "$LOG"
+fi
 
 # MONITORING CONFIG
 CHECK_INTERVAL=15          # Check every 15s
@@ -46,10 +53,17 @@ if ! command -v shuf &> /dev/null; then
 fi
 
 # ========== Cleanup & Lock ==========
+# ========== Cleanup & Lock ==========
 cleanup() {
     echo "[*] Cleaning up old processes and locks..."
+    # Soft kill first
     pkill -f "$XRAY_BIN"
     pkill -f "xray_auto"
+    
+    # Hard kill if still alive
+    sleep 1
+    pkill -9 -f "$XRAY_BIN" 2>/dev/null
+    
     rm -f "$LOCK"
     rm -f "$IPLOCK"/*
 }
@@ -275,9 +289,12 @@ start_stream() {
 
     echo "[*] Starting stream $ID on 127.0.0.1:$PORT…" | tee -a "$LOG"
 
-    # Randomly pick a list number 1-20
-    # Use shuf to pick a number
-    RAND_LIST_NUM=$(shuf -i 1-20 -n 1)
+    # Select List ID (Random or Forced)
+    if [ -n "$OVERRIDE_LIST_ID" ]; then
+        RAND_LIST_NUM="$OVERRIDE_LIST_ID"
+    else
+        RAND_LIST_NUM=$(shuf -i 1-$TOTAL_LISTS_COUNT -n 1)
+    fi
     
     # URL for the list in the repo
     REPO_URL="https://raw.githubusercontent.com/olololok/pro/main/proxy_lists/list_${RAND_LIST_NUM}.txt"
@@ -285,7 +302,7 @@ start_stream() {
     LIST_FILE="$WORKDIR/links_$ID.txt"
     
     echo "   -> Stream $ID fetching $REPO_URL"
-    $CURL_BIN -skL --connect-timeout 10 --retry 2 "$REPO_URL" > "$LIST_FILE"
+    $CURL_BIN -skL --connect-timeout 10 --max-time 20 --retry 2 "$REPO_URL" > "$LIST_FILE"
     
     # Validation
     if [ ! -s "$LIST_FILE" ] || grep -q "404: Not Found" "$LIST_FILE"; then
@@ -320,7 +337,8 @@ start_stream() {
         if [[ "$IP" =~ ^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
             if set_ip "$ID" "$IP"; then
                 echo "[✓] Stream $ID → IP $IP (PID: $XRAY_PID)" | tee -a "$LOG"
-                # Keep running until it dies/fails monitor
+                # Export PID for monitor
+                export CURRENT_XRAY_PID_$ID=$XRAY_PID
                 return
             else
                 echo "[x] Stream $ID: duplicate IP $IP" | tee -a "$LOG"
@@ -330,7 +348,7 @@ start_stream() {
         fi
 
         # Kill invalid process
-        kill $XRAY_PID 2>/dev/null
+        kill -9 $XRAY_PID 2>/dev/null
         pkill -f "$CFG"
     done < "$LIST_FILE"
 
@@ -370,20 +388,28 @@ monitor_stream() {
     local ID="$1"
     local PORT="$2"
     local NO_ESTAB_TIME=0
-
+    
+    # We rely on pgrep -f "x_$ID.json" to find the specific process for this stream
+    
     while true; do
         sleep $CHECK_INTERVAL
 
-        # Check for ESTABLISHED connection on the local port
-        # Fallback to netstat if ss is missing (Windows compatibility)
+        # 1. Check if Xray is strictly running for this config
+        if ! pgrep -f "x_$ID.json" > /dev/null; then
+             echo "[DEAD] Stream $ID: Process vanished. Restarting..." | tee -a "$LOG"
+             start_stream "$ID" "$PORT"
+             NO_ESTAB_TIME=0
+             continue
+        fi
+
+        # 2. Check for ESTABLISHED connection
         ESTABLISHED=0
         if command -v ss >/dev/null; then
              if ss -ntp | grep -q ":$PORT " | grep -q "ESTAB"; then
                  ESTABLISHED=1
              fi
         else
-             # Windows / No ss -> use netstat
-             # netstat -an output: TCP 127.0.0.1:1081 ... ESTABLISHED
+             # Windows / No ss -> fallback
              if netstat -an | grep -q ":$PORT " | grep -q "ESTAB"; then
                  ESTABLISHED=1
              fi
@@ -395,11 +421,12 @@ monitor_stream() {
             NO_ESTAB_TIME=$((NO_ESTAB_TIME + CHECK_INTERVAL))
         fi
 
+        # Force restart if no connection for too long
         if (( NO_ESTAB_TIME >= DEAD_THRESHOLD )); then
             echo "[DEAD] Stream $ID: No ESTAB > $DEAD_THRESHOLD sec. Restarting..." | tee -a "$LOG"
             
-            # Kill process using this config
-            pkill -f "x_$ID.json"
+            # HARD KILL to prevent zombies
+            pkill -9 -f "x_$ID.json"
             
             # Restart
             start_stream "$ID" "$PORT"

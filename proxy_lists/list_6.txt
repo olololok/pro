@@ -202,3 +202,8 @@ vmess://eyJ2IjogIjIiLCAicHMiOiAiVVNfMTI5LjE0Ni4xMzMuMTU3XzA0MDYyMDIzNDA2ZC03Nzl2
 trojan://tg-dns68@162.159.153.1:443?security=tls&type=ws&sni=vip.putata.eu.org&path=/?ed=2560&host=vip.putata.eu.org#@Vip_Security join us - 590
 ss://YWVzLTI1Ni1nY206Y2RCSURWNDJEQ3duZklO@38.75.136.135:8118#%F0%9F%87%BA%F0%9F%87%B8US-38.75.136.135-6371
 vless://c6438552-6882-44b9-f186-ec2ffef8d01a@chat.deepseek.com:80?type=ws&path=/olem/ws?ed=1024&host=fin.channel.digicyber.click&security=none#US_5160_@Surfboardv2ray
+vmess://eyJhZGQiOiIzOC4xODAuMTYuODYiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImZwIjoiIiwiaG9zdCI6IiIsImlkIjoiYTU4YmMxYTUtOGMxOC00OWZmLTk0NTMtYzMzMWI1MmY0NWRjIiwibmV0IjoidGNwIiwicGF0aCI6IiIsInBvcnQiOiIzNjIzNiIsInBzIjoiQFZpcF9TZWN1cml0eSBqb2luIHVzIC0gNDMxXG4iLCJzY3kiOiJhdXRvIiwic25pIjoiIiwidGxzIjoiIiwidHlwZSI6IiIsInYiOiIyIn0=
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTprMWRCT21PQjRvcWk3VW1wMzdhMWJR@45.87.175.155:8080#US%20%20ROSE81
+trojan://bpb-trojan@104.26.4.60:443?peer=zamim340.ggff.net&plugin=obfs-local;obfs=websocket;obfs-host=zamim340.ggff.net;obfs-uri=/tr?ed=2560#United+States
+vmess://eyJhZGQiOiI1MS44MS4yMjMuNCIsInYiOiIyIiwicHMiOiLwn4e68J+HuFVTXzE1NyIsInBvcnQiOjQ0MywiaWQiOiJjMDE1NjQ1MS00ZWZiLTQ1ZTItODRmYy04ZDMxNWM0NjUwZGIiLCJhaWQiOiIzMiIsIm5ldCI6InRjcCIsInR5cGUiOiIiLCJob3N0IjoiIiwicGF0aCI6Ii81M2Y5YWQwLyIsInRscyI6IiJ9
+vless://32099b7d-ef28-4321-a9c2-2f726f17b0bf@tuneltest.mobilewear.ir:443?security=reality&encryption=none&pbk=c_57_t7B7wz8BTp8qgYE2jYXv822lNihPhkUWGd8Uj0&headerType=none&fp=firefox&spx=%2F&type=tcp&sni=tgju.org&sid=8e#@Vip_Security join us - 655

@@ -22,3 +22,8 @@ trojan://auto@162.159.153.228:443?security=tls&type=ws&sni=fe9b5676-a2aa-4b6a-82
 trojan://trojan@ip.sb:8443?path=%2F&security=tls&host=fofang.pages.dev&type=ws&sni=fofang.pages.dev#@Vip_Security join us - 598
 trojan://936c6853-6bbf-4e24-8667-ec5b2fc275b3@104.26.14.85:443?peer=md1.safecdn.site&plugin=obfs-local;obfs=websocket;obfs-host=md1.safecdn.site;obfs-uri=/Telegram@FreeV2Alpha#United+States
 trojan://auto@104.21.35.43:443?peer=esetsecuritylicense3.wawafec355.workers.dev&plugin=obfs-local;obfs=websocket;obfs-host=esetsecuritylicense3.wawafec355.workers.dev;obfs-uri=/#United+States
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTprMWRCT21PQjRvcWk3VW1wMzdhMWJR@45.87.175.168:8080#US%20%20ROSE261
+ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M=@156.146.38.169:443#%F0%9F%87%BA%F0%9F%87%B8US-156.146.38.169-0241
+trojan://62b78c9b-16cb-4ee6-824b-a4f856cf18f3@transfer01.kaochangonline.online:443?#@Vip_Security join us - 65
+trojan://trojan@104.26.12.31:8443?security=tls&sni=fofang.pages.dev&type=tcp#@Vip_Security join us - 597
+trojan://e2722c0fb503f8a592436c12bce0509a@160.16.89.176:2890?sni=www.nintendogames.net#%F0%9F%87%BA%F0%9F%87%B8US%E7%BE%8E%E5%9B%BD7%20941.5KB%2Fs

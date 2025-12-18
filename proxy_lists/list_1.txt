@@ -258,3 +258,6 @@ trojan://CXCu72eya8wFeRySSFpDz3CN6jBYac5OIl3q0gSl8xZOADY3EK94pxZanDA3RT@35.77.21
 trojan://tg-dns68@162.159.152.145:443?security=tls&type=ws&sni=vip.putata.eu.org&path=/?ed=2560&host=vip.putata.eu.org#@Vip_Security join us - 587
 vless://df0680ca-e43c-498d-ed86-8e196eedd012@638732516883232709.rome-mpl-dr.info:8880?mode=gun&security=none&encryption=none&type=grpc#@Vip_Security join us - 3012
 ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@45.87.175.92:8080#US%20%20ROSE90
+vless://2ee2a715-d541-416a-8713-d66567448c2e@91.99.113.207:443?mode=gun&security=none&encryption=none&type=grpc#@Vip_Security join us - 586
+vless://2ee2a715-d541-416a-8713-d66567448c2e@91.98.168.173:443/?type=grpc&encryption=none&flow=#@Vip_Security join us - 577
+vless://2ee2a715-d541-416a-8713-d66567448c2e@91.98.39.30:443/?type=grpc&encryption=none&flow=#@Vip_Security join us - 582

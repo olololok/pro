@@ -94,3 +94,14 @@ trojan://3482c71a-d01c-4ae5-b454-fa8cb3785f66@94.131.20.3:443?security=tls&heade
 ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpwNzhuYUNmMkVmT2xSU0xUWDB3RlZ4@71.19.148.143:443#%F0%9F%87%BA%F0%9F%87%B8US%E7%BE%8E%E5%9B%BD5%2036.8KB%2Fs
 ss://YWVzLTI1Ni1nY206cEtFVzhKUEJ5VFZUTHRN@38.114.114.67:443#%F0%9F%87%BA%F0%9F%87%B8US-38.114.114.67-6746
 ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpmOGY3YUN6Y1BLYnNGOHAz@104.192.226.106:990#US%20%20ROSE79
+trojan://amclubs2024@198.62.62.156:443?peer=tr.amclub.us.kg&plugin=obfs-local;obfs=websocket;obfs-host=tr.amclub.us.kg;obfs-uri=/?ed=2560#United+States
+vless://48a8cab5-ce75-4c8a-90f5-dcd020c89b4b@31.44.0.63:58349/?type=tcp&encryption=none&flow=#@Vip_Security join us - 933
+trojan://tg-dns68@162.159.153.119:443?security=tls&type=ws&sni=vip.putata.eu.org&path=/?ed=2560&host=vip.putata.eu.org#@Vip_Security join us - 589
+trojan://dd2f25b4c70689de8bc0f7fa9d6591cb@160.16.89.176:702?security=tls&headerType=none&type=tcp&sni=www.nintendogames.net#@Vip_Security join us - 251
+vless://43791e7f-8e02-4189-9533-4f842bcacd79@charming-process.seotoolsforyou.co.uk:80?path=%2F%3FJoin---MARAMBASHI---Join---MARAMBASHI---Join---MARAMBASHI---Join---MARAMBASHI%3Fed%3D2560&security=none&encryption=none&type=ws#@Vip_Security join us - 819
+trojan://0507fbcd-b983-43a7-8e1d-2c561960ad4f@54d-bd0d-c3f111d0b879.664.qzz.io:443?security=tls&sni=54D-bD0D-c3F111D0b879.664.Qzz.Io&type=ws&path=/E2JXJM5geneWfr9noOhn#@Vip_Security join us - 1
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@ltnl12.saint.ydns.eu:8080#US%20%20ROSE599
+trojan://bpb-trojan@162.159.152.227:443?security=tls&sni=cf.090227.xyz&allowInsecure=1&type=tcp#@Vip_Security join us - 220
+vmess://eyJwcyI6ICLwn4e68J+HuC3nvo7lm70tcGFvcGFvLnYyLnVzMDUucGFvcGFvY2xvdWQuY3lvdSIsICJhZGQiOiAicGFvcGFvLnYyLnVzMDUucGFvcGFvY2xvdWQuY3lvdSIsICJwb3J0IjogIjMzMDYiLCAidHlwZSI6ICJ2bWVzcyIsICJpZCI6ICJkNjJhMTE2ZS1jMDE0LTMzZTUtOTQ1OC1kMWI2ZTI3MWU3YTUiLCAiYWlkIjogIjAiLCAibmV0IjogIndzIiwgInBhdGgiOiAiLyIsICJob3N0IjogInVzMDUuc3NydTQuZnVuIiwgInRscyI6ICJ0bHMiLCAic2N5IjogImF1dG8ifQ==
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpwNzhuYUNmMkVmT2xSU0xUWDB3RlZ4@71.19.148.143:443#%F0%9F%87%BA%F0%9F%87%B8US%E7%BE%8E%E5%9B%BD5%2036.8KB%2Fs
+vmess://eyJhZGQiOiI0Ni4zLjI0LjEzOCIsImFpZCI6IjAiLCJpZCI6ImU1Y2U0MjVlLTBiODQtNDM1Yy1hZWU1LTlmOWVjYmUyY2IxNiIsIm5ldCI6InJhdyIsInBvcnQiOiIyMDAwMiIsInBzIjoiQFZpcF9TZWN1cml0eSBqb2luIHVzIC0gNDlcbiIsInNjeSI6ImF1dG8iLCJ0eXBlIjoibm9uZSIsInYiOiIyIn0=

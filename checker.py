@@ -272,12 +272,25 @@ def fetch_proxies():
                 content = resp.text
                 
                 # Try base64 decode if it looks like a blob and doesn't contain protocol headers
+                # Try base64 decode if it looks like a blob and doesn't contain protocol headers
                 if "vmess://" not in content and "vless://" not in content and "trojan://" not in content and "ss://" not in content:
                     try:
+                        # Try standard UTF-8 decode
                         decoded = base64.b64decode(content).decode('utf-8')
                         content = decoded
-                    except:
-                        pass
+                    except Exception:
+                        try:
+                             # Some subscriptions might be just base64, but if decode fails, it might be raw
+                             pass
+                        except: pass
+
+                # Remove potential Chinese characters or non-printable junk if decode went wrong
+                # But careful not to remove valid UTF-8 remarks if any
+                # The user issue shows "汶獥" which is likely "vmess" in UTF-16 LE interpreted as UTF-8/GBK
+                # If we see many non-ascii chars, it might be bad decode.
+                
+                # Check for "Mojibake" - if line looks like garbage, skip it.
+                # Refined logic: validation is done in the loop below.
                 
                 # Extract lines
                 for line in content.splitlines():

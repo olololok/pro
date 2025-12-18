@@ -250,3 +250,5 @@ vless://telegram-id-Arfilter@www.speedtest.net:443?path=%2Ftelegram-ArV2ray,tele
 vless://c98a16e4-0dc5-42f0-b3db-30f04525c123@104.18.86.131:443?path=%2F%3Fed&security=tls&encryption=none&fp=chrome&type=ws&sni=vless5-edu.pages.dev#@Vip_Security join us - 2699
 vless://df0680ca-e43c-498d-ed86-8e196eedd012@94.232.247.177:8880?mode=gun&security=none&encryption=none&authority=---_T&type=grpc#@Vip_Security join us - 3100
 vless://d672ec4f-afba-4f61-af09-eec872f97e99@172.67.191.101:443?encryption=none&security=tls&sni=test45-45f.pages.dev&fp=chrome&type=ws&host=test45-45f.pages.dev&path=%2FTwitter%E8%8B%8F%E5%B0%8F%E6%9F%A0#@Hope_Net-join-us-on-Telegram`
+vless://e50fa46f-20c6-4c0d-fa0e-d9ffd92df36f@91.107.169.78:41647?type=grpc&encryption=none&serviceName=&authority=&security=none#@Vip_Security join us - 3237
+vless://2ee2a715-d541-416a-8713-d66567448c2e@91.99.113.207:443?mode=gun&security=none&encryption=none&type=grpc#@Vip_Security join us - 586

@@ -251,3 +251,6 @@ trojan://8r%3C%5B9'l6hAO%238ZQi@172.66.44.230:8443?encryption=none&security=tls&
 vless://2ee2a715-d541-416a-8713-d66567448c2e@91.98.39.30:443?mode=gun&security=none&encryption=none&type=grpc#@Vip_Security join us - 584
 vless://82f9beee-a609-47f2-9142-14c25258dc0b@81.27.100.89:4655?security=none&encryption=none&headerType=none&type=tcp#@Vip_Security join us - 1853
 vless://2ee2a715-d541-416a-8713-d66567448c2e@91.98.193.27:443?mode=gun&security=&encryption=none&type=grpc#@Vip_Security join us - 579
+vless://2ee2a715-d541-416a-8713-d66567448c2e@91.98.193.27:443/?type=grpc&encryption=none&flow=#@Vip_Security join us - 578
+vless://e50fa46f-20c6-4c0d-fa0e-d9ffd92df36f@91.107.130.214:41647?mode=gun&security=none&encryption=none&authority=&type=grpc&serviceName=#@Vip_Security join us - 3233
+vless://2ee2a715-d541-416a-8713-d66567448c2e@91.98.155.240:443?type=grpc&encryption=none&serviceName=&authority=&security=none#@Vip_Security join us - 576

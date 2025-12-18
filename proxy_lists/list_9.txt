@@ -247,3 +247,5 @@ trojan://bpb-trojan@104.18.37.111:443?allowInsecure=1&sni=mindrOOm-5cz.pAgEs.dEV
 vless://4c26ebc3-7784-46d8-b52a-7b0ccae6f4b4@100.24.64.27:443?security=reality&encryption=none&pbk=TGlPtfVzGIVpMauPRMGJj2Uu6GUiCpu5ZizIIjw-wx4&headerType=none&fp=chrome&spx=%2F&type=tcp&flow=xtls-rprx-vision&sni=chatgpt.com&sid=f5#@Vip_Security join us - 985
 vless://2ee2a715-d541-416a-8713-d66567448c2e@91.98.155.240:443?type=grpc&encryption=none&serviceName=&authority=&security=none#@Vip_Security join us - 576
 vless://2ee2a715-d541-416a-8713-d66567448c2e@91.98.123.121:443/?type=grpc&encryption=none&flow=#@Vip_Security join us - 572
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@45.140.167.168:8880?mode=gun&security=none&encryption=none&type=grpc&serviceName=#@Vip_Security join us - 2999
+vless://95b1344a-2b59-419f-ab7d-2ff7e5c6aa34@91.98.33.242:443?mode=gun&security=none&encryption=none&type=grpc#@Vip_Security join us - 2077

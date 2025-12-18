@@ -247,3 +247,5 @@ vmess://eyJhZGQiOiAiMzguMTQuOTkuMTc5IiwgImFpZCI6ICIwIiwgImFscG4iOiAiIiwgImZwIjog
 vmess://eyJhZGQiOiAiMTY1LjE0MC4yMTYuMTQxIiwgImFpZCI6ICIwIiwgImFscG4iOiAiIiwgImZwIjogIiIsICJob3N0IjogIiIsICJpZCI6ICJlN2Q3MmE4ZC0yNmYyLTRiNTQtYjM2Ni0wYzQzZTBiY2JhN2QiLCAibmV0IjogInRjcCIsICJwYXRoIjogIiIsICJwb3J0IjogIjQ0MyIsICJwcyI6ICJcdWQ4M2NcdWRkZmFcdWQ4M2NcdWRkZjhVU18xNjRfQFN1cmZib2FyZHYycmF5IiwgInNjeSI6ICJhdXRvIiwgInNuaSI6ICIiLCAidGxzIjogIiIsICJ0eXBlIjogIm5vbmUiLCAidiI6ICIyIn0=
 vless://df0680ca-e43c-498d-ed86-8e196eedd012@146.19.230.254:8880?mode=gun&security=none&encryption=none&type=grpc#@Vip_Security join us - 2920
 vless://2ee2a715-d541-416a-8713-d66567448c2e@91.98.41.26:443/?type=grpc&encryption=none&flow=#@Vip_Security join us - 585
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@638732516883232709.rome-mpl-dr.info:8880?mode=gun&security=none&encryption=none&type=grpc#@Vip_Security join us - 3012
+vless://2ee2a715-d541-416a-8713-d66567448c2e@91.98.123.121:443?mode=gun&security=&encryption=none&type=grpc#@Vip_Security join us - 573

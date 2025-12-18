@@ -57,3 +57,7 @@ trojan://trojan@104.26.12.31:8443?security=tls&sni=fofang.pages.dev&allowInsecur
 vmess://eyJ2IjogIjIiLCAicHMiOiAiUmVsYXlf8J+HuvCfh7hVUy3wn4e68J+HuFVTXzI1MSIsICJhZGQiOiAiMTk4LjIuMjAzLjE0NSIsICJwb3J0IjogNTAwMDIsICJhaWQiOiA2NCwgInNjeSI6ICJhdXRvIiwgIm5ldCI6ICJ0Y3AiLCAidHlwZSI6ICJub25lIiwgInRscyI6ICIiLCAiaWQiOiAiNDE4MDQ4YWYtYTI5My00Yjk5LTliMGMtOThjYTM1ODBkZDI0In0=
 trojan://trojan@104.18.3.150:443?peer=main.xicun.us.kg&plugin=obfs-local;obfs=websocket;obfs-host=main.xicun.us.kg;obfs-uri=#United+States
 trojan://WOeXShhJpL@172.67.67.64:443?security=tls&sni=09jzus.zdzdzd.xyz&type=ws&path=/juzigongyi&Host=09jzus.zdzdzd.xyz#%F0%9F%87%BA%F0%9F%87%B8_US_%E7%BE%8E%E5%9B%BD
+trojan://telegram-id-privatevpns@3.120.201.68:22222?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk#@Vip_Security join us - 446
+trojan://0507fbcd-b983-43a7-8e1d-2c561960ad4f@54d-bd0d-c3f111d0b879.664.qzz.io:443?security=tls&sni=54D-bD0D-c3F111D0b879.664.Qzz.Io&type=ws&path=/E2JXJM5geneWfr9noOhn#@Vip_Security join us - 41
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@173.234.29.2:990#%5Bermaozi%2Fget_subscribe%5D%F0%9F%87%BA%F0%9F%87%B8_US_%E7%BE%8E%E5%9B%BD
+trojan://Watashi_VPN@104.17.147.22:443?path=%2F&security=tls&host=t-watashi-r-jacket-o-people-jan.watashi-java.ir&fp=chrome&type=ws&sni=t-watashi-r-jacket-o-people-jan.watashi-java.ir#@Vip_Security join us - 169

@@ -233,3 +233,8 @@ ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvait
 trojan://dd2f25b4c70689de8bc0f7fa9d6591cb@160.16.89.176:702?security=tls&headerType=none&type=tcp&sni=www.nintendogames.net#@Vip_Security join us - 251
 ss://YWVzLTI1Ni1nY206S2l4THZLendqZWtHMDBybQ==@38.68.134.9:8000#%F0%9F%87%BA%F0%9F%87%B8US-38.68.134.9-0868
 ss://YWVzLTI1Ni1nY206Rm9PaUdsa0FBOXlQRUdQ@167.88.63.99:7306#%F0%9F%87%BA%F0%9F%87%B8US-167.88.63.99-4721
+vless://2ee2a715-d541-416a-8713-d66567448c2e@91.98.193.27:443?mode=gun&security=none&encryption=none&type=grpc#@Vip_Security join us - 580
+vmess://eyJ2IjogIjIiLCAicHMiOiAi8J+HuvCfh7hVU18xODI1IiwgImFkZCI6ICIzOC42MC4yMDguMTQ1IiwgInBvcnQiOiAyMTM1NCwgImFpZCI6IDY0LCAic2N5IjogImF1dG8iLCAibmV0IjogIndzIiwgInR5cGUiOiAibm9uZSIsICJ0bHMiOiAidGxzIiwgImlkIjogImE1MjljZjM5LWQ3NTMtNDFlNS1hNzJhLTY0Y2Y4ZDQ4ZjQ2OSIsICJwYXRoIjogIi90azIvZ2V0RGF0YSJ9
+trojan://7778e684-f435-4166-bf9e-0256cb28bf10@download2hkt.windowsupdate.lol:443?security=tls#%F0%9F%87%BA%F0%9F%87%B8US-15.197.162.184-2479
+vmess://ewogICAgImFkZCI6ICIxNTQuMTcuMjIuNTYiLAogICAgImFpZCI6IDAsCiAgICAiaG9zdCI6ICIiLAogICAgImlkIjogImNiNDQ4OWM3LWE5NjYtMzIwYy05MTIwLWYxN2E3ZGZiNDk5OSIsCiAgICAibmV0IjogIndzIiwKICAgICJwYXRoIjogIi9nYW1lIiwKICAgICJwb3J0IjogODA4MywKICAgICJwcyI6ICLwn4e68J+HuFVTLTE1NC4xNy4yMi41Ni0yNjU3IiwKICAgICJ0bHMiOiAiIiwKICAgICJ0eXBlIjogImF1dG8iLAogICAgInNlY3VyaXR5IjogImF1dG8iLAogICAgInNraXAtY2VydC12ZXJpZnkiOiB0cnVlLAogICAgInNuaSI6ICIiCn0=
+trojan://d0298536-d670-4045-bbb1-ddd5ea68683e@104.25.254.4:2087?encryption=none&security=tls&sni=azadnet-bdr.pages.dev&type=ws&host=azadnet-bdr.pages.dev&path=%2Fazadnet-bdr.pages.dev%2F%3Fed%3D2560%26PROT_TYPE%3Dtrojan#@Vip_Security join us - 230

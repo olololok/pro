@@ -240,3 +240,8 @@ trojan://dba20dcb635e430fa4d3bfc303a149d2@190.93.246.247:443?security=tls&type=w
 vless://d950eb8f-422f-46d5-9ede-4cfbf4db2bab@lovetea1.dastur-amuzesh.ir:3002?security=none&path=%2f#%f0%9f%87%ba%f0%9f%87%b8%20US%206
 vless://cb11729b-5e0f-4b2f-ab24-c46447d70ffd@65.109.220.108:443?mode=gun&security=reality&encryption=none&pbk=UaozFwutxGNcfJIJMoMDBR7lzxG1wF9V0zTK0kG-vxo&fp=chrome&type=grpc&serviceName=telegram-%40SpringHQ%2Ctelegram-%40SpringHQ%2Ctelegram-%40SpringHQ%2Ctelegram-%40SpringHQ%2Ctelegram-%40SpringHQ%2Ctelegram-%40SpringHQ%2Ctelegram-%40SpringHQ&sni=preview.redd.it&sid=1df5f63bade0#@Vip_Security join us - 2722
 trojan://tg-dns68@162.159.152.133:443?security=tls&type=ws&sni=vip.putata.eu.org&path=/?ed=2560&host=vip.putata.eu.org#@Vip_Security join us - 586
+trojan://8557692d-c228-48f0-b6f9-50d44d4a2096@104.19.52.125:8443?security=tls&type=ws&sni=tjjd.yzyx1.v6.army#@Vip_Security join us - 77
+ss://YWVzLTI1Ni1nY206ZmFCQW9ENTRrODdVSkc3@38.75.136.117:2376#%F0%9F%87%BA%F0%9F%87%B8US-38.75.136.117-3728
+vless://2ee2a715-d541-416a-8713-d66567448c2e@91.98.155.240:443?mode=gun&security=none&encryption=none&type=grpc#@Vip_Security join us - 575
+trojan://bpb-trojan@104.18.37.111:443?allowInsecure=1&sni=mindrOOm-5cz.pAgEs.dEV&type=ws&host=mindrOOm-5cz.pAgEs.dEV&path=/trC8BM8bTsAF0AnLYL#15|US_speednode_0133
+vless://4c26ebc3-7784-46d8-b52a-7b0ccae6f4b4@100.24.64.27:443?security=reality&encryption=none&pbk=TGlPtfVzGIVpMauPRMGJj2Uu6GUiCpu5ZizIIjw-wx4&headerType=none&fp=chrome&spx=%2F&type=tcp&flow=xtls-rprx-vision&sni=chatgpt.com&sid=f5#@Vip_Security join us - 985

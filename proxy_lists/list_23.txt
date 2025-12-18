@@ -59,3 +59,7 @@ ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo0YTJyZml4b3BoZGpmZmE4S1ZBNEFh@45.87.175.166:
 trojan://tg-dns68@162.159.152.145:443?security=tls&type=ws&sni=vip.putata.eu.org&path=/?ed=2560&host=vip.putata.eu.org#@Vip_Security join us - 587
 ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTprMWRCT21PQjRvcWk3VW1wMzdhMWJR@45.87.175.155:8080#US%20%20ROSE81
 trojan://trojan@ip.sb:8443?path=%2F&security=tls&host=fofang.pages.dev&type=ws&sni=fofang.pages.dev#@Vip_Security join us - 599
+vmess://eyJhZGQiOiJjZmNkbjIuc2FuZmVuY2RuOS5jb20iLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiJqcGFmenloZnNnMy55b2ZuaGtmYy54eXoiLCJpZCI6IjllYmIwOWVmLWNlNjktNGJiYi1iYThmLTNiZTZjNTJlZjljMiIsIm5ldCI6IndzIiwicGF0aCI6Ii92aWRlby91NGVDWlR4VyIsInBvcnQiOiIyMDUyIiwicHMiOiJAVmlwX1NlY3VyaXR5IGpvaW4gdXMgLSA1MzlcbiIsInNjeSI6ImF1dG8iLCJzbmkiOiIiLCJ0bHMiOiIiLCJ0eXBlIjoibm9uZSIsInYiOiIyIn0=
+vless://e50fa46f-20c6-4c0d-fa0e-d9ffd92df36f@91.107.130.76:41647?type=grpc&encryption=none&serviceName=&authority=&security=none#@Vip_Security join us - 3236
+vmess://eyJhZGQiOiIzOC4xODAuMTYuODYiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImZwIjoiIiwiaG9zdCI6IiIsImlkIjoiYTU4YmMxYTUtOGMxOC00OWZmLTk0NTMtYzMzMWI1MmY0NWRjIiwibmV0IjoidGNwIiwicGF0aCI6IiIsInBvcnQiOiIzNjIzNiIsInBzIjoiQFZpcF9TZWN1cml0eSBqb2luIHVzIC0gNDIzXG4iLCJzY3kiOiJhdXRvIiwic25pIjoiIiwidGxzIjoiIiwidHlwZSI6IiIsInYiOiIyIn0=
+vless://2aa80173-4cf7-4165-8689-6ce3caf6b28e@nginx.avaaaal.ir:80?mode=auto&path=%2F&security=none&encryption=none&host=amindc.ir&type=xhttp#@Vip_Security join us - 526

@@ -235,3 +235,8 @@ trojan://bpb-trojan@104.26.4.60:443?peer=zamim340.ggff.net&plugin=obfs-local;obf
 vmess://ewogICAgImFkZCI6ICIxNDIuNC4xMDguMTQ3IiwKICAgICJhaWQiOiA2NCwKICAgICJob3N0IjogIiIsCiAgICAiaWQiOiAiNDE4MDQ4YWYtYTI5My00Yjk5LTliMGMtOThjYTM1ODBkZDI0IiwKICAgICJuZXQiOiAid3MiLAogICAgInBhdGgiOiAiLyIsCiAgICAicG9ydCI6IDM4MDA3LAogICAgInBzIjogIvCfh7rwn4e4VVMtMTQyLjQuMTA4LjE0Ny03NjY5IiwKICAgICJ0bHMiOiAidGxzIiwKICAgICJ0eXBlIjogImF1dG8iLAogICAgInNlY3VyaXR5IjogImF1dG8iLAogICAgInNraXAtY2VydC12ZXJpZnkiOiB0cnVlLAogICAgInNuaSI6ICIiCn0=
 vless://53fff6cc-b4ec-43e8-ade5-e0c42972fc33@37.120.184.180:80?path=%2Fnews&security=none&encryption=none&host=cdn.ir&type=ws#@Vip_Security join us - 1328
 vless://a13df940-020c-465f-bc89-ee5279b5cd6a@173.245.49.27:443?allowInsecure=0&sni=lw.kpcloud.eu.org&type=ws&host=lw.kpcloud.eu.org&path=/?ed=2048security=tls#15|US_speednode_0100
+trojan://auto@104.21.35.43:443?peer=esetsecuritylicense3.wawafec355.workers.dev&plugin=obfs-local;obfs=websocket;obfs-host=esetsecuritylicense3.wawafec355.workers.dev;obfs-uri=/#United+States
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpRQ1hEeHVEbFRUTUQ3anRnSFVqSW9q@45.87.175.181:8080#US%20%20ROSE70
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpmOGY3YUN6Y1BLYnNGOHAz@104.192.226.106:990#%F0%9F%87%BA%F0%9F%87%B8US-104.192.226.106-0247
+vless://DIGIV2RaY@www.parspack.com:2095?encryption=none&host=www.speedtest.net.ftp.debian.org.www.digikala.com.radiotehran.org.&path=%2FDigi-Tel-Digiv-Digicnc-saaaalaaaam-%3Fed%3D1024&security=none&type=ws# | VLESS | @DigiV2ray | US | 04
+trojan://669d0ac7b5b64ebbb1abb75d5d540a5c@104.16.192.145:443?security=tls&type=ws&sni=jobscareerforlawyers.com&path=/6b777a91&host=jobscareerforlawyers.com#@Hope_Net-join-us-on-Telegram

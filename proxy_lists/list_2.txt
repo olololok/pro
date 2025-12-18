@@ -83,3 +83,14 @@ vless://4c26ebc3-7784-46d8-b52a-7b0ccae6f4b4@3.255.148.146:443?security=reality&
 trojan://0507fbcd-b983-43a7-8e1d-2c561960ad4f@54d-bd0d-c3f111d0b879.664.qzz.io:443?sni=54D-bD0D-c3F111D0b879.664.Qzz.Io#%F0%9F%87%BA%F0%9F%87%B8US%E7%BE%8E%E5%9B%BD2
 trojan://juzi@104.19.57.183:2096?security=tls&sni=juzi8186-sr1.pages.dev&type=tcp#@Vip_Security join us - 282
 vless://95b1344a-2b59-419f-ab7d-2ff7e5c6aa34@91.98.237.9:443?mode=gun&security=none&encryption=none&type=grpc#@Vip_Security join us - 2103
+trojan://bpb-trojan@104.21.75.193:443?peer=bpb-hd.aaronchin.xyz&plugin=obfs-local;obfs=websocket;obfs-host=bpb-hd.aaronchin.xyz;obfs-uri=/tr?ed=2560#United+States
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTprMWRCT21PQjRvcWk3VW1wMzdhMWJR@45.87.175.168:8080#US%20%20ROSE261
+trojan://NISHIKUITAN222@188.114.97.17:443?#%F0%9F%87%BA%F0%9F%87%B8US%E7%BE%8E%E5%9B%BD
+trojan://dd2f25b4c70689de8bc0f7fa9d6591cb@160.16.196.59:2890?security=tls&headerType=none&type=tcp&sni=www.nintendogames.net#@Vip_Security join us - 250
+trojan://NISHIKUITAN222@104.19.71.183:443?#%F0%9F%87%BA%F0%9F%87%B8US%E7%BE%8E%E5%9B%BD5
+vmess://eyJ2IjoiMiIsInBzIjoi8J+HuvCfh7ggLee+juWbvS11czEuZWxrbm9kZS50b3AiLCJhZGQiOiJ1czEuZWxrbm9kZS50b3AiLCJwb3J0IjoiODAiLCJ0eXBlIjoibm9uZSIsImlkIjoiMWVkZWQ2ZmMtOGIyOC0zM2RmLWE5M2YtNjQ5MWRlNWY3YTEyIiwiYWlkIjoiMCIsIm5ldCI6IndzIiwicGF0aCI6Ii8iLCJob3N0IjoiZGF0YS52aWRlby5xaXlpLmNvbSIsInRscyI6IiJ9
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTp3d3pWbjJabkhmcVlhNmw4RVdoM2VZ@switcher-nick-croquet.freesocks.work:443#US%E7%BE%8E%E5%9B%BD%28mibei77.com%20%E7%B1%B3%E8%B4%9D%E8%8A%82%E7%82%B9%E5%88%86%E4%BA%AB%29
+vmess://eyJ2IjogIjIiLCAicHMiOiAiQEhvcGVfTmV0LWpvaW4tdXMtb24tVGVsZWdyYW0iLCAiYWRkIjogIjJhMGY6NzgwMzpmYWMyOmQ5YzY6MDAwMDowMDAwOjAwMDA6MDAwMSIsICJwb3J0IjogIjI0NDUiLCAidHlwZSI6ICJub25lIiwgImlkIjogIjdmZmY2MGVkLTU5ZGItNGNjNi1hNWFkLWNmNDI3NGU1N2E1MCIsICJhaWQiOiAiMCIsICJuZXQiOiAid3MiLCAicGF0aCI6ICIvd2FkYTEyMjIyIiwgImhvc3QiOiAidG1zLmRpbmd0YWxrLmNvbSIsICJ0bHMiOiAiIn0=
+trojan://dd2f25b4c70689de8bc0f7fa9d6591cb@160.16.89.176:702?security=tls&headerType=none&type=tcp&sni=www.nintendogames.net#@Vip_Security join us - 251
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpucWNJZllIbHBNbjNqenFrTkRqS2FH@138.124.67.26:25572#US%E7%BE%8E%E5%9B%BD%28mibei77.com%20%E7%B1%B3%E8%B4%9D%E8%8A%82%E7%82%B9%E5%88%86%E4%BA%AB%29
+vless://e50fa46f-20c6-4c0d-fa0e-d9ffd92df36f@91.107.169.78:41647?mode=gun&security=none&encryption=none&type=grpc#@Vip_Security join us - 3186

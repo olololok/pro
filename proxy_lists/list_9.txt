@@ -77,3 +77,13 @@ vmess://ewogICAgImFkZCI6ICIxNDkuMzAuMjMyLjEwMyIsCiAgICAiYWlkIjogMCwKICAgICJob3N0
 trojan://T%40_WvT8Ho%40LW%25w_%2C@172.66.47.42:2053?path=%2FtrGPZDfetEwuO25SAs%3Fed%3D2560&security=tls&type=ws&sni=NOp-55q.pAgEs.dEv#@Vip_Security join us - 166
 vless://f775978b-6e22-41a8-ae5e-5f9779e6745f@89.116.180.130:2053?encryption=none&security=tls&sni=juzibaipiao.5112233.xyz&type=ws&host=juzibaipiao.5112233.xyz&path=%2f%3fed%3d2048#%f0%9f%87%ba%f0%9f%87%b8+US+%e7%be%8e%e5%9b%bd+64
 vless://2ee2a715-d541-416a-8713-d66567448c2e@91.98.155.240:443?mode=gun&security=none&encryption=none&type=grpc#@Vip_Security join us - 608
+trojan://7cbeb900-1939-11f0-ae81-1239d0255272@51.38.65.155:443?security=tls&headerType=none&type=tcp&sni=tgju.org#@Vip_Security join us - 77
+vmess://eyJ2IjogIjIiLCAicHMiOiAi8J+HuvCfh7hVU+e+juWbvSh5b3V0dWJl6Zi/5Lyf56eR5oqAKSIsICJhZGQiOiAiMTQyLjQuOTcuNzMiLCAicG9ydCI6ICI0NDk0MiIsICJhaWQiOiAiNjQiLCAic2N5IjogImF1dG8iLCAibmV0IjogInRjcCIsICJ0eXBlIjogIm5vbmUiLCAidGxzIjogIiIsICJpZCI6ICI0MTgwNDhhZi1hMjkzLTRiOTktOWIwYy05OGNhMzU4MGRkMjQiLCAic25pIjogIiJ9
+vmess://eyJhZGQiOiI1LjE5Ni4yOS4xMjMiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImZwIjoiIiwiaG9zdCI6Imdvb2dsZS5jb20iLCJpZCI6IjExMmFjMzZmLTNmNTMtNGUyNi04MzcxLWQyNWMwMjhlMWI5YSIsIm5ldCI6IndzIiwicGF0aCI6Ii8iLCJwb3J0IjoiMjA4MiIsInBzIjoiQFZpcF9TZWN1cml0eSBqb2luIHVzIC0gODJcbiIsInNjeSI6ImF1dG8iLCJzbmkiOiIiLCJ0bHMiOiIiLCJ0eXBlIjoiLS0tIiwidiI6IjIifQ==
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@45.87.175.10:8080#US%20%20ROSE190
+vmess://eyJ2IjogIjIiLCAicHMiOiAiUmVsYXlf8J+HuvCfh7hVUy3wn4e68J+HuFVTXzM2NSIsICJhZGQiOiAiMTQyLjQuMTI2LjU0IiwgInBvcnQiOiAzMzMwMiwgImFpZCI6IDY0LCAic2N5IjogImF1dG8iLCAibmV0IjogInRjcCIsICJ0eXBlIjogIm5vbmUiLCAidGxzIjogIiIsICJpZCI6ICI0MTgwNDhhZi1hMjkzLTRiOTktOWIwYy05OGNhMzU4MGRkMjQifQ==
+vless://TELEGRAM-CONFiGLiNE-73@151.101.195.8:80?mode=auto&path=%2Ftelegram-CONFiGLiNE%2Ctelegram-CONFiGLiNE%2Ctelegram-CONFiGLiNE%2Ctelegram-CONFiGLiNE%2Ctelegram-CONFiGLiNE%2Ctelegram-CONFiGLiNE%2Ctelegram-CONFiGLiNE%2Ctelegram-CONFiGLiNE%3Fed%3D2048&security=none&encryption=none&host=swedensnew.global.ssl.fastly.net&type=xhttp#@Vip_Security join us - 2223
+trojan://tg-dns68@162.159.152.96:443?security=tls&type=ws&sni=vip.putata.eu.org&path=/?ed=2560&host=vip.putata.eu.org#@Hope_Net-join-us-on-Telegram
+vless://e50fa46f-20c6-4c0d-fa0e-d9ffd92df36f@91.107.130.214:41647?mode=gun&security=none&encryption=none&type=grpc#@Vip_Security join us - 3183
+ss://YWVzLTEyOC1nY206aTJpMTdhMzlpeGRmeDN2OGN1MjU@205.209.104.94:17897# US | 205.209.104.94
+vmess://eyJhZGQiOiI0Ni4zLjI0LjIwMiIsImFpZCI6IjAiLCJpZCI6ImU1Y2U0MjVlLTBiODQtNDM1Yy1hZWU1LTlmOWVjYmUyY2IxNiIsIm5ldCI6InJhdyIsInBvcnQiOiIyMDAzNyIsInBzIjoiQFZpcF9TZWN1cml0eSBqb2luIHVzIC0gNjBcbiIsInNjeSI6ImF1dG8iLCJ0eXBlIjoibm9uZSIsInYiOiIyIn0=

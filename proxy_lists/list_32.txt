@@ -32,3 +32,8 @@ trojan://669d0ac7b5b64ebbb1abb75d5d540a5c@104.16.192.145:443?security=tls&type=w
 vmess://eyJhZGQiOiI0Ni4zLjI0LjIwMiIsImFpZCI6IjAiLCJpZCI6ImU1Y2U0MjVlLTBiODQtNDM1Yy1hZWU1LTlmOWVjYmUyY2IxNiIsIm5ldCI6InJhdyIsInBvcnQiOiIyMDAzMyIsInBzIjoiQFZpcF9TZWN1cml0eSBqb2luIHVzIC0gNTlcbiIsInNjeSI6ImF1dG8iLCJ0eXBlIjoibm9uZSIsInYiOiIyIn0=
 vless://e50fa46f-20c6-4c0d-fa0e-d9ffd92df36f@91.107.169.78:41647?mode=gun&security=none&encryption=none&type=grpc#@Vip_Security join us - 3186
 trojan://auto@162.159.153.102:443?security=tls&type=ws&sni=fe9b5676-a2aa-4b6a-8257-cd2dd0910205.8c98ef2b-bee2-470b-b759-9f5efbc10812.freeddns.org&host=fe9b5676-a2aa-4b6a-8257-cd2dd0910205.8c98ef2b-bee2-470b-b759-9f5efbc10812.freeddns.org#@Vip_Security join us - 191
+trojan://POORIARED@172.67.134.185:443?security=tls&sni=reDfRee8.REDFree8.ir&fp=chrome&type=ws&path=/eyJqdW5rIjoiVUl6eXhLZkkwUTJ3ZzkiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W119?ed=2560#@Vip_Security join us - 44
+vmess://eyJ2IjogIjIiLCAicHMiOiAi5rWB5pqi6ZuyIOe+juWci1BST3znm7TpgKN8VVMwMiIsICJhZGQiOiAibGMtdXMxMi1kaXJlY3QwMS5sYy11czAyLmxjLW5vZGUuY29tIiwgInBvcnQiOiA0NDMsICJhaWQiOiAyLCAic2N5IjogImF1dG8iLCAibmV0IjogIndzIiwgInR5cGUiOiAibm9uZSIsICJ0bHMiOiAidGxzIiwgImlkIjogImFjZGYyODU4LWNlMjctMzc5YS04YWE5LTMyYWE2OGE5Y2E5YyJ9
+vless://95b1344a-2b59-419f-ab7d-2ff7e5c6aa34@91.98.33.242:443?mode=gun&security=none&encryption=none&type=grpc#@Vip_Security join us - 2077
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTprMWRCT21PQjRvcWk3VW1wMzdhMWJR@45.87.175.155:8080#US%20%20ROSE81
+trojan://7dafe71e-2be6-302f-bdfc-e6319a3299bc@tj-us02.yiyodns.xyz:443#Relay_%F0%9F%87%BA%F0%9F%87%B8US-%F0%9F%87%BA%F0%9F%87%B8US_180

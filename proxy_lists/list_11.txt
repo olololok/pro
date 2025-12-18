@@ -207,3 +207,9 @@ vless://93867bc3-273b-4fd0-bbb1-2bed051ad215@89.187.187.13:443?security=tls&sni=
 ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@173.234.29.2:990#%5Bermaozi%2Fget_subscribe%5D%F0%9F%87%BA%F0%9F%87%B8_US_%E7%BE%8E%E5%9B%BD
 trojan://tg-dns68@162.159.152.96:443?security=tls&type=ws&sni=vip.putata.eu.org&path=/?ed=2560&host=vip.putata.eu.org#@Hope_Net-join-us-on-Telegram
 vless://05519058-d2ac-4f28-9e4a-2b2a1386749e@3.71.170.55:22224?type=ws&security=tls&path=%2Ftelegram-channel-vlessconfig&sni=trojan.burgerip.co.uk#@Vip_Security join us - 111
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@45.87.175.22:8080#US%20%20ROSE74
+trojan://telegram-id-privatevpns@3.126.180.133:22222?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk#@Vip_Security join us - 450
+trojan://telegram-id-privatevpns@35.181.224.159:22222?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk#@Vip_Security join us - 468
+vless://2ee2a715-d541-416a-8713-d66567448c2e@91.98.155.240:443?type=grpc&encryption=none&serviceName=&authority=&security=none#@Vip_Security join us - 576
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpucWNJZllIbHBNbjNqenFrTkRqS2FH@138.124.67.26:25572#US%E7%BE%8E%E5%9B%BD%28mibei77.com%20%E7%B1%B3%E8%B4%9D%E8%8A%82%E7%82%B9%E5%88%86%E4%BA%AB%29
+vmess://eyJ2IjoiMiIsInBzIjoi8J+HuvCfh7ggX1VTX+e+juWbvS0+8J+HqfCfh6pfREVf5b635Zu9IiwiYWRkIjoicXVyYW53ZWIyMy54eXoiLCJwb3J0IjoiNDQzIiwidHlwZSI6Im5vbmUiLCJpZCI6IjhiYmQ5MWZlLWEzMGItNGUyOS1iZmM3LWMyOGE0NGMwY2I4ZiIsImFpZCI6IjAiLCJuZXQiOiJ3cyIsInBhdGgiOiIvY3VycmVudF90aW1lIiwiaG9zdCI6InF1cmFud2ViMjMueHl6IiwidGxzIjoidGxzIn0=

@@ -202,3 +202,9 @@ vmess://eyJ2IjogIjIiLCAicHMiOiAi8J+HuvCfh7hVUy0xOTguMi4yMTguMjE2LTIwMzMiLCAiYWRk
 vmess://eyJ2IjogIjIiLCAicHMiOiAiUG9vbF/wn4e68J+HuFVTXzE3OTUiLCAiYWRkIjogIjE5OC4yLjIzMi4xNjQiLCAicG9ydCI6IDU0MzQyLCAiYWlkIjogNjQsICJzY3kiOiAiYXV0byIsICJuZXQiOiAidGNwIiwgInR5cGUiOiAibm9uZSIsICJ0bHMiOiAiIiwgImlkIjogIjQxODA0OGFmLWEyOTMtNGI5OS05YjBjLTk4Y2EzNTgwZGQyNCJ9
 trojan://bpb-trojan@104.21.75.193:443?peer=bpb-hd.aaronchin.xyz&plugin=obfs-local;obfs=websocket;obfs-host=bpb-hd.aaronchin.xyz;obfs-uri=/tr?ed=2560#United+States
 trojan://bpb-trojan@162.159.152.2:443?peer=zamim340.ggff.net&plugin=obfs-local;obfs=websocket;obfs-host=zamim340.ggff.net;obfs-uri=/tr?ed=2560#United+States
+trojan://2cf6d686799e6fa95316394064f26c0a@160.16.107.37:3093?security=tls&sni=www.nintendogames.net&allowInsecure=1&type=tcp#@Vip_Security join us - 30
+vmess://ew0KICAidiI6ICIyIiwNCiAgInBzIjogIlVT576O5Zu9KG1pYmVpNzcuY29tIOexs+i0neiKgueCueWIhuS6qykiLA0KICAiYWRkIjogInYzMC5oZGFjZC5jb20iLA0KICAicG9ydCI6ICIzMDgzMCIsDQogICJpZCI6ICJjYmIzZjg3Ny1kMWZiLTM0NGMtODdhOS1kMTUzYmZmZDU0ODQiLA0KICAiYWlkIjogIjAiLA0KICAic2N5IjogImF1dG8iLA0KICAibmV0IjogInRjcCIsDQogICJ0eXBlIjogIm5vbmUiLA0KICAiaG9zdCI6ICIiLA0KICAicGF0aCI6ICIiLA0KICAidGxzIjogIiIsDQogICJzbmkiOiAiIiwNCiAgImFscG4iOiAiIg0KfQ==
+trojan://dns68@199.68.156.69:443?path=%2F%3Fed%3D2560&security=tls&alpn=http%2F1.1&host=trojan.putata.us.kg&fp=randomized&type=ws&sni=trojan.putata.us.kg#@Vip_Security join us - 255
+trojan://trojan@ip.sb:8443?path=%2F&security=tls&host=fofang.pages.dev&type=ws&sni=fofang.pages.dev#%3E%3E%40vmessiran%3A%3AUS
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpHIXlCd1BXSDNWYW8=@162.251.61.221:809#%F0%9F%87%BA%F0%9F%87%B8US-162.251.61.221-4103
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@ltnl04.saint.ydns.eu:8080#US%20%20ROSE604

@@ -31,3 +31,8 @@ vmess://eyJ2IjogIjIiLCAicHMiOiAi8J+HuvCfh7hVU18xODY0IiwgImFkZCI6ICIxNDIuNC45Ny43
 vless://53fff6cc-b4ec-43e8-ade5-e0c42972fc33@185.143.232.224:80?path=%2Fnews&security=none&encryption=none&host=bama.ir.german.cdnir.org&type=ws#@Vip_Security join us - 1311
 vless://2ee2a715-d541-416a-8713-d66567448c2e@91.99.27.92:443/?type=grpc&encryption=none&flow=#@Vip_Security join us - 603
 ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M=@37.19.198.160:443#%F0%9F%87%BA%F0%9F%87%B8US-37.19.198.160-0665
+trojan://telegram-id-privatevpns@13.36.69.253:22222?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk#@Vip_Security join us - 408
+trojan://Ng35283528@104.16.83.176:443?peer=c2.validbv3528.eu.org&plugin=obfs-local;obfs=websocket;obfs-host=c2.validbv3528.eu.org;obfs-uri=/?ed=2560#United+States
+trojan://e2722c0fb503f8a592436c12bce0509a@160.16.89.176:2890?sni=www.nintendogames.net#%F0%9F%87%BA%F0%9F%87%B8US%E7%BE%8E%E5%9B%BD7%20941.5KB%2Fs
+trojan://tg-dns68@162.159.152.145:443?security=tls&type=ws&sni=vip.putata.eu.org&path=/?ed=2560&host=vip.putata.eu.org#@Vip_Security join us - 587
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTp3d3pWbjJabkhmcVlhNmw4RVdoM2VZ@switcher-nick-croquet.freesocks.work:443#US%E7%BE%8E%E5%9B%BD%28mibei77.com%20%E7%B1%B3%E8%B4%9D%E8%8A%82%E7%82%B9%E5%88%86%E4%BA%AB%29

@@ -225,3 +225,8 @@ vmess://eyJ2IjogIjIiLCAicHMiOiAiVVNfMTk4LjIuMjAzLjExM18wNDA1MjAyMzdlMWMtNjYydm1l
 trojan://WOeXShhJpL@172.67.67.64:443?security=tls&sni=09jzus.zdzdzd.xyz&type=ws&path=/juzigongyi&Host=09jzus.zdzdzd.xyz#%F0%9F%87%BA%F0%9F%87%B8_US_%E7%BE%8E%E5%9B%BD
 vmess://eyJ2IjogIjIiLCAicHMiOiAi8J+HuvCfh7ggX1VTX+e+juWbvSAxOCIsICJhZGQiOiAiMTk4LjIuMjAzLjUyIiwgInBvcnQiOiA0NDAwMiwgImFpZCI6IDY0LCAic2N5IjogImF1dG8iLCAibmV0IjogInRjcCIsICJ0eXBlIjogIm5vbmUiLCAidGxzIjogIiIsICJpZCI6ICI0MTgwNDhhZi1hMjkzLTRiOTktOWIwYy05OGNhMzU4MGRkMjQifQ==
 trojan://0507fbcd-b983-43a7-8e1d-2c561960ad4f@54d-bd0d-c3f111d0b879.664.qzz.io:443?security=tls&sni=54D-bD0D-c3F111D0b879.664.Qzz.Io&type=ws&host=54D-bD0D-c3F111D0b879.664.Qzz.Io&path=%2fE2JXJM5geneWfr9noOhn#%f0%9f%87%ba%f0%9f%87%b8%20US%203
+vmess://eyJ2IjoiMiIsInBzIjoi8J+HuvCfh7hfVVNf576O5Zu9LT7wn4eo8J+Hpl9DQV/liqDmi7/lpKciLCJhZGQiOiIxNzIuNjQuMTY2LjMzIiwicG9ydCI6MjA5NSwiYWlkIjowLCJzY3kiOiJhdXRvIiwibmV0Ijoid3MiLCJ0eXBlIjoibm9uZSIsInRscyI6IiIsImlkIjoiMThkOTYxOTAtYzEwZi00NDhmLWE4MmEtMmQzNmRmNWMzY2RlIiwiaG9zdCI6ImlwMTIuNjAxNjcyNS54eXoiLCJwYXRoIjoiL2dpdGh1Yi5jb20vQWx2aW45OTk5In0=
+trojan://c51d3975-a40c-4a5b-929b-c8595ed87850@15.168.28.231:443?allowInsecure=1&sni=wel-usgt.optage.moe#US_AzadNet%288%29
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpwNzhuYUNmMkVmT2xSU0xUWDB3RlZ4@71.19.148.143:443#US%20%20ROSE20
+vmess://eyJ2IjogIjIiLCAicHMiOiAiUG9vbF/wn4e68J+HuFVTXzE3NjAiLCAiYWRkIjogIjM4LjU0LjI1MC41MyIsICJwb3J0IjogNTE0MzEsICJhaWQiOiA2NCwgInNjeSI6ICJhdXRvIiwgIm5ldCI6ICJ0Y3AiLCAidHlwZSI6ICJub25lIiwgInRscyI6ICIiLCAiaWQiOiAiNDE4MDQ4YWYtYTI5My00Yjk5LTliMGMtOThjYTM1ODBkZDI0In0=
+trojan://dba20dcb635e430fa4d3bfc303a149d2@190.93.246.247:443?security=tls&type=ws&sni=jobscareerforlawyers.com&path=/6b777a91&host=jobscareerforlawyers.com#@Vip_Security join us - 248

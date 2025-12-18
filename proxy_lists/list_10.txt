@@ -229,3 +229,8 @@ vmess://eyJ2IjoiMiIsInBzIjoi8J+HuvCfh7hfVVNf576O5Zu9LT7wn4eo8J+Hpl9DQV/liqDmi7/l
 vmess://ew0KICAidiI6ICIyIiwNCiAgInBzIjogIvCfh7rwn4eyIFVuaXRlZCBTdGF0ZXMgMjQ5IiwNCiAgImFkZCI6ICIxNzIuNjcuMTY0LjE4NCIsDQogICJwb3J0IjogIjQ0MyIsDQogICJpZCI6ICIwM2ZjYzYxOC1iOTNkLTY3OTYtNmFlZC04YTM4Yzk3NWQ1ODEiLA0KICAiYWlkIjogIjEiLA0KICAic2N5IjogImF1dG8iLA0KICAibmV0IjogIndzIiwNCiAgInR5cGUiOiAibm9uZSIsDQogICJob3N0IjogImFsdnZpbi5jbGljayIsDQogICJwYXRoIjogImxpbmt2d3MiLA0KICAidGxzIjogInRscyIsDQogICJzbmkiOiAiYWx2dmluLmNsaWNrIiwNCiAgImFscG4iOiAiIg0KfQ==
 vmess://eyJ2IjogIjIiLCAicHMiOiAi8J+HuvCfh7ggX1VTX+e+juWbvV9fX18iLCAiYWRkIjogIjE5Mi43NC4yMzQuNzgiLCAicG9ydCI6ICI1MTMwMiIsICJhaWQiOiA2NCwgInNjeSI6ICJhdXRvIiwgIm5ldCI6ICJ0Y3AiLCAidHlwZSI6ICJub25lIiwgInRscyI6ICIiLCAiaWQiOiAiNDE4MDQ4YWYtYTI5My00Yjk5LTliMGMtOThjYTM1ODBkZDI0In0=
 ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpjdklJODVUclc2bjBPR3lmcEhWUzF1@45.87.175.185:8080#US%20%20ROSE507
+trojan://bpb-trojan@104.26.5.60:443?peer=zamim340.ggff.net&plugin=obfs-local;obfs=websocket;obfs-host=zamim340.ggff.net;obfs-uri=/tr?ed=2560#United+States
+ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M=@37.19.198.243:443#%F0%9F%87%BA%F0%9F%87%B8US-37.19.198.243-0663
+vless://6cc53dc5-55b2-4968-bb7c-ee84e1429c63@104.26.1.108:443?path=%2Fkr1%3Fed%3D2560%2F%3FTELEGRAM_CHANEL_JKVPN_JKVPN_JKVPN&security=tls&encryption=none&host=ava.game.naver.com.servpn.my.id&fp=chrome&type=ws&sni=ava.game.naver.com.servpn.my.id#@Vip_Security join us - 1628
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@ltnl15.saint.ydns.eu:8080#US%20%20ROSE602
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNToxUld3WGh3ZkFCNWdBRW96VTRHMlBn@ltnl02.saint.ydns.eu:8080#US%20%20ROSE601

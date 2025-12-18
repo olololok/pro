@@ -47,3 +47,8 @@ vless://95b1344a-2b59-419f-ab7d-2ff7e5c6aa34@91.98.33.242:443/?type=grpc&encrypt
 ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpjdklJODVUclc2bjBPR3lmcEhWUzF1@45.87.175.190:8080#US%20%20ROSE516
 trojan://c5110090-c3a2-429e-b9b8-072b6535be1b@ct.cfyun.top:443?security=tls&sni=cfus4.trojanwss.xyz&type=ws&host=cfus4.trojanwss.xyz&path=%2FCFJICHANG#@Vip_Security join us - 222
 vless://f5d7d068-3325-43d8-85bd-e8ed665abcd5@94.72.99.160:8443/?type=tcp&encryption=none&flow=xtls-rprx-vision&sni=www.microsoft.com&fp=safari&security=reality&pbk=CsPJilX_bL4eatrPYHcBbnDEERssJU-2Igrnm8mir0Q&sid=8f79818e36afd892#@Vip_Security join us - 3486
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpsZWpTUnlxYTAzM09FUG1FUXN2UnNs@194.59.183.134:46114#US%E7%BE%8E%E5%9B%BD%28mibei77.com%20%E7%B1%B3%E8%B4%9D%E8%8A%82%E7%82%B9%E5%88%86%E4%BA%AB%29
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@ltnl04.saint.ydns.eu:8080#US%20%20ROSE604
+vmess://eyJhZGQiOiJ2YWxsLmNvZGVmeWluYy5jb20iLCJhaWQiOiIwIiwiYWxwbiI6IiIsImZwIjoiIiwiaG9zdCI6InZhbGwuY29kZWZ5aW5jLmNvbSIsImlkIjoiNjA2ZWNlMTctNzI3OS00YTQzLWI4NzktZjg1MDIxMDNkZThmIiwibmV0Ijoid3MiLCJwYXRoIjoiL3ZtZXNzd3MiLCJwb3J0IjoiNDQzIiwicHMiOiJAVmlwX1NlY3VyaXR5IGpvaW4gdXMgLSA0MzhcbiIsInNjeSI6ImF1dG8iLCJzbmkiOiJ2YWxsLmNvZGVmeWluYy5jb20iLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoiLS0tIiwidiI6IjIifQ==
+vless://7d9223e9-9ab1-4a8c-b8ec-3bc4fb937cd8@m90a.vip784.com:33801?security=none&type=tcp&headerType=http&path=%2F&host=varzesh3.ir#@Vip_Security join us - 1797
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@ltnl10.saint.ydns.eu:8080#US%20%20ROSE593

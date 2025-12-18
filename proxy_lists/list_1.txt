@@ -247,3 +247,9 @@ vless://82f9beee-a609-47f2-9142-14c25258dc0b@81.27.100.89:4655?security=none&enc
 trojan://yaml777@104.21.61.73:443?peer=yaml7.ggff.net&plugin=obfs-local;obfs=websocket;obfs-host=yaml7.ggff.net;obfs-uri=/#United+States
 vmess://eyJ2IjogIjIiLCAicHMiOiAiVVNfMTI5LjE0Ni4xMzMuMTU3XzA0MDUyMDIzOTNjNy0yODh2bWVzcyIsICJhZGQiOiAiMTI5LjE0Ni4xMzMuMTU3IiwgInBvcnQiOiA1MTAwOSwgImFpZCI6IDAsICJzY3kiOiAiYXV0byIsICJuZXQiOiAidGNwIiwgInR5cGUiOiAibm9uZSIsICJ0bHMiOiAiIiwgImlkIjogIjgxNzE0Y2VmLTliZGUtNGEwOC1hYTUwLWQ2YmMwMTcyZDc4YiIsICJzbmkiOiAiIn0=
 vless://2ee2a715-d541-416a-8713-d66567448c2e@91.98.39.30:443?mode=gun&security=&encryption=none&type=grpc#@Vip_Security join us - 583
+trojan://984e400bf5d541b7b0815913fe0c432a@104.18.42.197:443?security=tls&type=ws&sni=bangladeshipatri.com&path=6b777a91&host=bangladeshipatri.com#@Vip_Security join us - 97
+trojan://d0298536-d670-4045-bbb1-ddd5ea68683e@104.25.254.4:2087?security=tls&sni=azadnet-bdr.pages.dev&allowInsecure=1&type=tcp#@Vip_Security join us - 232
+vless://82f9beee-a609-47f2-9142-14c25258dc0b@194.113.73.136:4655?security=none&encryption=none&headerType=none&type=tcp#%3E%3E%40v2rayNG_Matsuri%3A%3AUS
+vless://0c0b6d4a-0811-460f-d4b0-dd982a911240@91.99.8.201:443?security=reality&encryption=none&pbk=zW8LR-lHS_PXDyY8Q8bE_zvKdhY5MAmnsd8miBulx2U&headerType=none&fp=chrome&type=tcp&sni=store.steampowered.com#@Vip_Security join us - 198
+trojan://juzi@104.19.57.183:2096?security=tls&sni=juzi8186-sr1.pages.dev&type=tcp#@Vip_Security join us - 282
+trojan://a5a3350e-6ea2-4e12-ae84-20db849ce1fc@94.131.114.50:81?path=%2F94.131.114.50%3D81&security=tls&host=joss.dus.biz.id&type=ws&sni=joss.dus.biz.id#@Vip_Security join us - 182

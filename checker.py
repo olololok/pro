@@ -199,35 +199,47 @@ def check_proxy(link, thread_id):
     # 3. Start Xray
     # We use a subprocess. Popen allows us to kill it later.
     try:
-        proc = subprocess.Popen([XRAY_BIN, "run", "-c", config_file], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        proc = subprocess.Popen([XRAY_BIN, "run", "-c", config_file], stdout=subprocess.DEVNULL, stderr=subprocess.PIPE)
         
         # Give it a moment to start
         time.sleep(0.5)
         
-        # 4. Curl check
-        # curl -x socks5h://127.0.0.1:PORT
-        chk_cmd = [
-            "curl", "-s", "--connect-timeout", "5", "--max-time", "8",
-            "-x", f"socks5h://127.0.0.1:{local_port}",
-            CHECK_URL
-        ]
-        
-        try:
-            # We look for a 200 OK or just successful exit code with body content
-            result = subprocess.run(chk_cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-            if result.returncode == 0 and len(result.stdout) > 100:
-                # Assuming google returns more than 100 bytes
-                success = True
-            else:
-                success = False
-        except Exception:
+        # Check if process is still running
+        if proc.poll() is not None:
+            # It died
+            stderr = proc.stderr.read().decode('utf-8', errors='ignore')
+            if thread_id == 0: # Print only first thread error to avoid spam
+                print(f"[DEBUG] Xray died immediately. Stderr: {stderr[:200]}")
             success = False
+        else:
+            # 4. Curl check
+            # curl -x socks5h://127.0.0.1:PORT
+            chk_cmd = [
+                "curl", "-s", "--connect-timeout", "5", "--max-time", "8",
+                "-x", f"socks5h://127.0.0.1:{local_port}",
+                CHECK_URL
+            ]
+            
+            try:
+                # We look for a 200 OK or just successful exit code with body content
+                result = subprocess.run(chk_cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+                if result.returncode == 0 and len(result.stdout) > 100:
+                    # Assuming google returns more than 100 bytes
+                    success = True
+                else:
+                    success = False
+                    # Debug curl failure occasionally
+                    if thread_id == 0 and random.random() < 0.05:
+                         print(f"[DEBUG] Curl failed. Return: {result.returncode}, Stdout len: {len(result.stdout)}")
+            except Exception:
+                success = False
             
     except Exception as e:
+        print(f"[DEBUG] Exception checking proxy: {e}")
         success = False
     finally:
         # Cleanup
-        if 'proc' in locals():
+        if 'proc' in locals() and proc:
             proc.terminate()
             try:
                 proc.wait(timeout=2)

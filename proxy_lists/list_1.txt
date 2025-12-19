@@ -51,3 +51,4 @@ vless://49aefaed-ad06-4ce9-ad25-b75b6b489b0c@Www.speedtest.net:8880?path=/?ed=20
 vless://e50fa46f-20c6-4c0d-fa0e-d9ffd92df36f@91.107.130.76:41647/?type=grpc&encryption=none&flow=#4FreeIran-11761
 vless://dc8eccdb-ecfa-435f-9ac1-5dc4882e7b51@162.19.228.119:80?security=none&type=ws&path=%2Fhttp#4FreeIran-11085
 vless://2ee2a715-d541-416a-8713-d66567448c2e@91.98.123.121:443?mode=gun&security=none&encryption=none&authority=&type=grpc&serviceName=#4FreeIran-6370
+vless://2ee2a715-d541-416a-8713-d66567448c2e@91.98.39.30:443?mode=gun&security=none&encryption=none&type=grpc#4FreeIran-6392

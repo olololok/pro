@@ -229,9 +229,10 @@ def check_proxy(link, thread_id):
                     success = True
                 else:
                     success = False
-                    # Debug curl failure occasionally
+                    # Debug curl failure occasionally - silenced
                     if thread_id == 0 and random.random() < 0.05:
-                         print(f"[DEBUG] Curl failed. Return: {result.returncode}, Stdout len: {len(result.stdout)}")
+                         pass
+                         # print(f"[DEBUG] Curl failed. Return: {result.returncode}, Stdout len: {len(result.stdout)}")
             except Exception:
                 success = False
             
@@ -297,9 +298,10 @@ def fetch_proxies():
                 for line in content.splitlines():
                     line = line.strip()
                     if line and (
-                        # line.startswith("vmess://") or 
-                        line.startswith("vless://") 
-                        # or line.startswith("trojan://") or line.startswith("ss://")
+                        line.startswith("vmess://") or 
+                        line.startswith("vless://") or 
+                        line.startswith("trojan://") or 
+                        line.startswith("ss://")
                     ):
                         links.add(line)
         except Exception as e:
@@ -383,8 +385,8 @@ def main():
     # Combine and deduplicate
     all_links = list(set(queue_links + fetched_links))
     
-    # TEMP: Filter ONLY vless
-    all_links = [l for l in all_links if l.startswith("vless://")]
+    # TEMP: Filter REMOVED to allow all protocols
+    # all_links = [l for l in all_links if l.startswith("vless://")]
     
     # Shuffle for randomness
     random.shuffle(all_links)

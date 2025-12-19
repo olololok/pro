@@ -261,7 +261,7 @@ def fetch_proxies():
     links = set()
     
     # Use specific URL requested by user
-    url = "https://raw.githubusercontent.com/AvenCores/goida-vpn-configs/refs/heads/main/githubmirror/2.txt"
+    url = "https://raw.githubusercontent.com/sevcator/5ubscrpt10n/main/protocols/vl.txt"
     
     urls = [url]
     
@@ -356,6 +356,38 @@ def save_distributed(proxies):
             f.close()
             
     print(f"Distributed {len(unique_new_proxies)} UNIQUE proxies into {TOTAL_OUTPUT_LISTS} files in 'proxy_lists/'")
+
+def save_general(proxies):
+    # Save all found proxies to a single general list
+    # We append to it, but we could also deduplicate against it if we read it first.
+    # For simplicity and speed, let's just append updates.
+    
+    if not proxies: return
+
+    # Simple deduplication against file content could be expensive if large, 
+    # but let's try to be clean.
+    existing = set()
+    if os.path.exists(RESULTS_FILE):
+        try:
+            with open(RESULTS_FILE, 'r') as f:
+                for line in f:
+                    existing.add(line.strip())
+        except: pass
+        
+    new_unique = [p for p in proxies if p not in existing]
+    
+    print(f"DEBUG: Found {len(proxies)} proxies to save. {len(new_unique)} are new unique.")
+
+    if new_unique:
+        try:
+            with open(RESULTS_FILE, 'a') as f:
+                for p in new_unique:
+                    f.write(p + "\n")
+            print(f"Saved {len(new_unique)} new proxies to general list '{RESULTS_FILE}'")
+        except Exception as e:
+            print(f"ERROR: Failed to write to {RESULTS_FILE}: {e}")
+    else:
+        print("No new proxies for general list.")
 
 def main():
     start_time = time.time()
@@ -461,6 +493,7 @@ def main():
     # Save Results
     if working_proxies:
         save_distributed(working_proxies)
+        save_general(working_proxies)
 
     # Save Queue State (unchecked proxies)
     if not remaining_links and exhausted and not future_to_link:

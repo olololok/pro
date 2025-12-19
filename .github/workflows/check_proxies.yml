@@ -49,11 +49,15 @@ jobs:
         
         # Add proxy list folder and the queue state file
         git add proxy_lists/ proxies_queue.txt
+        if [ -f proxy_list_found.txt ]; then
+          git add proxy_list_found.txt
+        fi
         
         # Commit if there are changes
         if git diff --staged --quiet; then
           echo "No changes to commit."
         else
           git commit -m "Update proxies [$(date)]"
+          git pull --rebase origin main
           git push
         fi

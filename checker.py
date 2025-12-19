@@ -279,7 +279,9 @@ def fetch_proxies():
                     line = line.strip()
                     if line and (
                         line.startswith("vless://") or
-                        line.startswith("vmess://")
+                        line.startswith("vmess://") or
+                        line.startswith("trojan://") or
+                        line.startswith("ss://")
                     ):
                         links.add(line)
         except Exception as e:
@@ -294,10 +296,15 @@ def load_queue():
                 lines = []
                 for l in f.readlines():
                     l = l.strip()
-                    if l and (l.startswith("vless://") or l.startswith("vmess://")):
+                    if l and (
+                        l.startswith("vless://") or 
+                        l.startswith("vmess://") or
+                        l.startswith("trojan://") or
+                        l.startswith("ss://")
+                    ):
                         lines.append(l)
             if lines:
-                print(f"Loaded {len(lines)} proxies from queue file (filtered VLESS/VMESS).")
+                print(f"Loaded {len(lines)} proxies from queue file.")
                 return lines
         except Exception as e:
             print(f"Error loading queue: {e}")

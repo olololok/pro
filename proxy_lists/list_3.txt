@@ -23,3 +23,4 @@ vmess://eyJhZGQiOiAiMzguMTQuOTkuMTc5IiwgImFpZCI6ICIwIiwgImFscG4iOiAiIiwgImZwIjog
 vmess://eyJhZGQiOiIxNS4yMzUuNDEuMjAwIiwiYWlkIjoiMCIsImFscG4iOiIiLCJmcCI6IiIsImhvc3QiOiIiLCJpZCI6IjU4ZmUxNTQyLTUyOTAtNDBhZC04MTVhLTc3NzA3YTgxYWZlNSIsIm5ldCI6IndzIiwicGF0aCI6Ii9JT2ViaExNaGwxQ1RiRkhiTDk1bXlmUlgyIiwicG9ydCI6IjgwIiwicHMiOiJAVk1FU1NJUjROINis2YfYqiDYrtix24zYryDaqdin2YbZgduM2q8iLCJzY3kiOiJhdXRvIiwic25pIjoiIiwidGxzIjoiIiwidHlwZSI6IiIsInYiOiIyIn0=
 vless://53fff6cc-b4ec-43e8-ade5-e0c42972fc33@37.120.186.241:80?path=%2Fnews&security=none&encryption=none&host=cdn.ir&type=ws#%40V2RAY_VMESS_free
 vless://2ee2a715-d541-416a-8713-d66567448c2e@91.98.193.27:443?mode=gun&security=&encryption=none&type=grpc#%F0%9F%87%A9%F0%9F%87%AA%40FreakConfig
+vless://a13df940-020c-465f-bc89-ee5279b5cd6a@20.84.117.28:443?security=tls&sni=lg.kpcloud.eu.org&type=ws&host=lg.kpcloud.eu.org&path=%2F%3Fed%3D2048# VL-WS-TLS  US-20.84.117.28:443

@@ -1,9 +1,0 @@
-name = "proxy-cacher"
-main = "worker.js"
-compatibility_date = "2023-10-25"
-
-# [vars]
-# MY_VAR = "my-variable"
-
-# [triggers]
-# crons = ["1 * * * *"] 

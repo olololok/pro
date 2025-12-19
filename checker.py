@@ -261,7 +261,7 @@ def fetch_proxies():
     links = set()
     
     # Use specific URL requested by user
-    url = "https://raw.githubusercontent.com/sevcator/5ubscrpt10n/main/protocols/vl.txt"
+    url = "https://github.com/sevcator/5ubscrpt10n/raw/refs/heads/main/working/countries/United%20States.txt"
     
     urls = [url]
     

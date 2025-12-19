@@ -16,3 +16,5 @@ vless://2ee2a715-d541-416a-8713-d66567448c2e@91.98.168.173:443/?type=grpc&encryp
 vless://197092b3-e995-48b7-a34b-d32eb75b62e1@194.150.166.134:17166?security=none&encryption=none&headerType=none&type=tcp#rya
 vless://4751adcd-064b-493e-979b-b1c56c133cb4@188.114.98.6:80?encryption=none&security=none&type=ws&host=speedtest.net # [ By EbraSha ]
 vless://2ee2a715-d541-416a-8713-d66567448c2e@91.99.82.11:443/?type=grpc&encryption=none&flow=#12@oneclickvpnkeys
+vless://d950eb8f-422f-46d5-9ede-4cfbf4db2bab@lovetea1.dastur-amuzesh.ir:3002?security=none&encryption=none&host=Zula.ir&headerType=none&type=tcp# US | 172.245.233.119
+vmess://ew0KICAidiI6ICIyIiwNCiAgInBzIjogIuiNt+WFsDd8MC43TS9zKHlvdXR1YmXpmL/kvJ/np5HmioApIiwNCiAgImFkZCI6ICJjODFzNS5qanZpcDguY29tIiwNCiAgInBvcnQiOiAiMTkxOTgiLA0KICAiaWQiOiAiZjZkNjVjNmItMGExMC00ODg3LTg1NDEtYjg2ZDg1YzMxZDA5IiwNCiAgImFpZCI6ICIwIiwNCiAgInNjeSI6ICJhdXRvIiwNCiAgIm5ldCI6ICJ0Y3AiLA0KICAidHlwZSI6ICJub25lIiwNCiAgImhvc3QiOiAiWVRCLWF3a2oiLA0KICAicGF0aCI6ICIvIiwNCiAgInRscyI6ICIiLA0KICAic25pIjogIiIsDQogICJhbHBuIjogIiIsDQogICJmcCI6ICIiDQp9

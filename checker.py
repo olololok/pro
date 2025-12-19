@@ -260,9 +260,8 @@ def fetch_proxies():
     print("Fetching new proxies from sources...")
     links = set()
     
-    # Randomly select a list from 1 to 35 (excluding 36)
-    list_id = random.randint(1, 35)
-    url = f"https://raw.githubusercontent.com/sevcator/5ubscrpt10n/main/mini/m1n1-5ub-{list_id}.txt"
+    # Use specific URL requested by user
+    url = "https://raw.githubusercontent.com/AvenCores/goida-vpn-configs/refs/heads/main/githubmirror/2.txt"
     
     urls = [url]
     

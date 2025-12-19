@@ -291,9 +291,13 @@ def load_queue():
     if os.path.exists(QUEUE_FILE):
         try:
             with open(QUEUE_FILE, 'r') as f:
-                lines = [l.strip() for l in f.readlines() if l.strip()]
+                lines = []
+                for l in f.readlines():
+                    l = l.strip()
+                    if l and (l.startswith("vless://") or l.startswith("vmess://")):
+                        lines.append(l)
             if lines:
-                print(f"Loaded {len(lines)} proxies from queue file.")
+                print(f"Loaded {len(lines)} proxies from queue file (filtered VLESS/VMESS).")
                 return lines
         except Exception as e:
             print(f"Error loading queue: {e}")

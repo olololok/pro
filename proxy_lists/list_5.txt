@@ -45,3 +45,5 @@ vless://2ee2a715-d541-416a-8713-d66567448c2e@91.98.193.27:443/?type=grpc&encrypt
 vless://2ee2a715-d541-416a-8713-d66567448c2e@91.98.123.121:443?encryption=none&security=none&type=grpc#4FreeIran-6367
 vless://95b1344a-2b59-419f-ab7d-2ff7e5c6aa34@91.98.93.136:443?mode=gun&security=&encryption=none&type=grpc#4FreeIran-9263
 vless://eafc3326-9b4f-444b-8c31-efdb0ee11577@172.66.40.99:2052?type=ws&path=/@Maznet--@Maznet--@Maznet--@Maznet--@Maznet--@Maznet--@Maznet--@Maznet--@Maznet--@Maznet--@Maznet--@Maznet--@Maznet--@Maznet--@Maznet--@Maznet--@Maznet--@Maznet--@Maznet--@Maznet--@Maznet--@Maznet--@Maznet--@Maznet&host=--.snaptripupport.space.&security=none#4FreeIran-12006
+vless://2ee2a715-d541-416a-8713-d66567448c2e@91.98.155.240:443?type=grpc&path=%2f#%f0%9f%87%a9%f0%9f%87%aa%20DE%207
+vless://2ee2a715-d541-416a-8713-d66567448c2e@91.98.155.240:443/?type=grpc&encryption=none&flow= # [ By EbraSha ]

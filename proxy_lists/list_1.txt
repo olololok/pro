@@ -141,3 +141,8 @@ vless://3116cc23-0c39-4bb6-8154-d3f332e9017e@fi4.srv.oplcdn.link:6443?security=r
 vless://df0680ca-e43c-498d-ed86-8e196eedd012@45.159.248.125:8880?mode=gun&security=none&encryption=none&type=grpc#3
 vless://2ee2a715-d541-416a-8713-d66567448c2e@91.98.39.30:443/?type=grpc&encryption=none&flow=#DE_1601_@Surfboardv2ray
 vless://2ee2a715-d541-416a-8713-d66567448c2e@91.99.27.92:443/?type=grpc&encryption=none&flow=#DE_1612_@Surfboardv2ray
+vless://95b1344a-2b59-419f-ab7d-2ff7e5c6aa34@91.98.93.136:443?mode=gun&security=none&encryption=none&type=grpc#[By EbraSha] vless-DE
+vless://697eabfd-653c-4da2-8b3f-b4806e0b60aa@139.162.145.100:443?mode=stream-one&path=/&security=none&encryption=none&type=xhttp#DE_3179_@Surfboardv2ray
+vless://95b1344a-2b59-419f-ab7d-2ff7e5c6aa34@91.98.93.136:443?mode=gun&security=none&encryption=none&type=grpc#%F0%9F%87%A9%F0%9F%87%AA%40FreakConfig
+vless://1b197700-e6fd-43ea-96ca-488f4c4cd731@93.127.180.128:125?security=none&serviceName=Telegram--FILTERK0SH--Telegram--FILTERK0SH--Telegram--FILTERK0SH--Telegram--FILTERK0SH--Telegram--FILTERK0SH--Telegram--FILTERK0SH--Telegram--FILTERK0SH&encryption=none&headerType=none&type=tcp#Join+Telegram:@Farah_VPN
+vless://2ee2a715-d541-416a-8713-d66567448c2e@91.99.210.212:443?encryption=none&security=none&type=grpc#Join+Telegram:@Farah_VPN

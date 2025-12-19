@@ -260,9 +260,8 @@ def fetch_proxies():
     print("Fetching new proxies from sources...")
     links = set()
     
-    # Fetch from 5 random lists to ensure we get enough proxies (approx 1500-2000 if files are small, or more if large)
-    # Range 1-35
-    list_ids = random.sample(range(1, 36), 5) 
+    # Fetch from ALL 35 lists to ensure maximum volume (35 * ~300 = ~10500 proxies)
+    list_ids = range(1, 36) 
     
     for list_id in list_ids:
         url = f"https://raw.githubusercontent.com/sevcator/5ubscrpt10n/main/mini/m1n1-5ub-{list_id}.txt"

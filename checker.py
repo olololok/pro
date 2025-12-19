@@ -19,7 +19,7 @@ MAX_THREADS = 200 # Faster scraping
 BASE_PORT = 20000
 
 # Staged Execution Config
-TARGET_WORKING_COUNT = 10000 # Stop after finding this many working proxies
+TARGET_WORKING_COUNT = 50000 # Stop after finding this many working proxies
 MAX_RUNTIME = 1750 # Seconds (approx 29 mins) to match 30m schedule
 QUEUE_FILE = "proxies_queue.txt" # File to store unchecked proxies
 RESULTS_FILE = "proxy_list_found.txt" # File to store working proxies (appended or overwritten)
@@ -412,7 +412,7 @@ def main():
     random.shuffle(all_links)
     
     # Cap total proxies to check to prevent extreme runtimes or memory usage
-    if len(all_links) > 60000:
+    if len(all_links) > 10000:
         print(f"Capping total proxies from {len(all_links)} to 10000.")
         all_links = all_links[:10000]
     

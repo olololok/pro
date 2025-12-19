@@ -260,41 +260,20 @@ def fetch_proxies():
     print("Fetching new proxies from sources...")
     links = set()
     
-    # Randomly select a list from 1 to 35 (excluding 36)
-    list_id = random.randint(1, 35)
-    US_PROXY_URL = f"https://raw.githubusercontent.com/sevcator/5ubscrpt10n/main/mini/m1n1-5ub-{list_id}.txt"
+    # Fetch from 5 random lists to ensure we get enough proxies (approx 1500-2000 if files are small, or more if large)
+    # Range 1-35
+    list_ids = random.sample(range(1, 36), 5) 
     
-    urls = [US_PROXY_URL]
-    
-    for url in urls:
+    for list_id in list_ids:
+        url = f"https://raw.githubusercontent.com/sevcator/5ubscrpt10n/main/mini/m1n1-5ub-{list_id}.txt"
         print(f"Fetching {url}")
         try:
             resp = requests.get(url, timeout=15)
             if resp.status_code == 200:
                 content = resp.text
                 
-                # Try base64 decode if it looks like a blob and doesn't contain protocol headers
-                # Try base64 decode if it looks like a blob and doesn't contain protocol headers
-                if "vmess://" not in content and "vless://" not in content and "trojan://" not in content and "ss://" not in content:
-                    try:
-                        # Try standard UTF-8 decode
-                        decoded = base64.b64decode(content).decode('utf-8')
-                        content = decoded
-                    except Exception:
-                        try:
-                             # Some subscriptions might be just base64, but if decode fails, it might be raw
-                             pass
-                        except: pass
-
-                # Remove potential Chinese characters or non-printable junk if decode went wrong
-                # But careful not to remove valid UTF-8 remarks if any
-                # The user issue shows "汶獥" which is likely "vmess" in UTF-16 LE interpreted as UTF-8/GBK
-                # If we see many non-ascii chars, it might be bad decode.
+                # Check for "Mojibake" or base64 decoding if needed (skipped as file seems plain)
                 
-                # Check for "Mojibake" - if line looks like garbage, skip it.
-                # Refined logic: validation is done in the loop below.
-                
-                # Extract lines
                 for line in content.splitlines():
                     line = line.strip()
                     if line and (
@@ -390,6 +369,11 @@ def main():
     
     # Shuffle for randomness
     random.shuffle(all_links)
+    
+    # Cap total proxies to check to prevent extreme runtimes or memory usage
+    if len(all_links) > 10000:
+        print(f"Capping total proxies from {len(all_links)} to 10000.")
+        all_links = all_links[:10000]
     
     print(f"Total proxies to check: {len(all_links)}")
     if len(all_links) == 0:

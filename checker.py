@@ -412,7 +412,7 @@ def main():
     random.shuffle(all_links)
     
     # Cap total proxies to check to prevent extreme runtimes or memory usage
-    if len(all_links) > 10000:
+    if len(all_links) > 60000:
         print(f"Capping total proxies from {len(all_links)} to 10000.")
         all_links = all_links[:10000]
     

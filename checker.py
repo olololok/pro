@@ -260,11 +260,13 @@ def fetch_proxies():
     print("Fetching new proxies from sources...")
     links = set()
     
-    # Fetch from ALL 35 lists to ensure maximum volume (35 * ~300 = ~10500 proxies)
-    list_ids = range(1, 36) 
+    # Randomly select a list from 1 to 35 (excluding 36)
+    list_id = random.randint(1, 35)
+    url = f"https://raw.githubusercontent.com/sevcator/5ubscrpt10n/main/mini/m1n1-5ub-{list_id}.txt"
     
-    for list_id in list_ids:
-        url = f"https://raw.githubusercontent.com/sevcator/5ubscrpt10n/main/mini/m1n1-5ub-{list_id}.txt"
+    urls = [url]
+    
+    for url in urls:
         print(f"Fetching {url}")
         try:
             resp = requests.get(url, timeout=15)
@@ -276,10 +278,8 @@ def fetch_proxies():
                 for line in content.splitlines():
                     line = line.strip()
                     if line and (
-                        line.startswith("vmess://") or 
-                        line.startswith("vless://") or 
-                        line.startswith("trojan://") or 
-                        line.startswith("ss://")
+                        line.startswith("vless://") or
+                        line.startswith("vmess://")
                     ):
                         links.add(line)
         except Exception as e:

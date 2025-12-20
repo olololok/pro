@@ -14,14 +14,204 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 # Configuration
 XRAY_BIN = "./xray"  # Assumes xray is in current dir
 CHECK_URL = "https://checkip.amazonaws.com" # No captcha, just IP
-TIMEOUT = 10 # Seconds for curl/connect (Increased from 6)
+TIMEOUT = 10 # Seconds for curl/connect
 MAX_THREADS = 200 # Faster scraping
 BASE_PORT = 20000
 
-# ... (rest of config)
+# Staged Execution Config
+TARGET_WORKING_COUNT = 50000 # Stop after finding this many working proxies
+MAX_RUNTIME = 1750 # Seconds (approx 29 mins) to match 30m schedule
+QUEUE_FILE = "proxies_queue.txt" # File to store unchecked proxies
+RESULTS_FILE = "proxy_list_found.txt" # File to store working proxies (appended or overwritten)
+TOTAL_OUTPUT_LISTS = 5 # Number of separate lists to distribute proxies into
 
-# ... (inside check_proxy function)
+def parse_vmess(link):
+    """Parse vmess:// link to Xray outbound config object."""
+    try:
+        data = link[8:] # strip vmess://
+        # Try decoding base64
+        try:
+            decoded = base64.b64decode(data).decode('utf-8')
+            json_config = json.loads(decoded)
+            
+            # Extract fields from standard vmess json
+            add = json_config.get("add")
+            port = int(json_config.get("port", 0))
+            uuid = json_config.get("id")
+            aid = int(json_config.get("aid", 0))
+            net = json_config.get("net", "tcp")
+            path = json_config.get("path", "")
+            host = json_config.get("host", "")
+            if not (add and port and uuid): return None
+            
+            stream_settings = {
+                "network": net,
+            }
+            if net == "ws":
+                stream_settings["wsSettings"] = {"path": path, "headers": {"Host": host}}
+                
+            return {
+                "protocol": "vmess",
+                "settings": {
+                    "vnext": [{
+                        "address": add,
+                        "port": port,
+                        "users": [{"id": uuid, "alterId": aid}]
+                    }]
+                },
+                "streamSettings": stream_settings
+            }
 
+        except Exception:
+            return None
+    except Exception as e:
+        return None
+
+def parse_vless(link):
+    """Parse vless://uuid@host:port?params#name"""
+    try:
+        # vless://uuid@host:port?query
+        parse = urllib.parse.urlparse(link)
+        if parse.scheme != "vless": return None
+        
+        uuid = parse.username
+        host = parse.hostname
+        port = parse.port
+        params = urllib.parse.parse_qs(parse.query)
+        
+        if not (uuid and host and port): return None
+
+        net = params.get("type", ["tcp"])[0]
+        path = params.get("path", [""])[0]
+        encryption = params.get("encryption", ["none"])[0]
+        
+        stream_settings = {"network": net}
+        if net == "ws":
+             stream_settings["wsSettings"] = {"path": path}
+        
+        return {
+            "protocol": "vless",
+            "settings": {
+                "vnext": [{
+                    "address": host,
+                    "port": port,
+                    "users": [{"id": uuid, "encryption": encryption}]
+                }]
+            },
+            "streamSettings": stream_settings
+        }
+    except Exception:
+        return None
+
+def parse_trojan(link):
+    """Parse trojan://password@host:port?params#name"""
+    try:
+        parse = urllib.parse.urlparse(link)
+        if parse.scheme != "trojan": return None
+        
+        password = parse.username
+        host = parse.hostname
+        port = parse.port
+        
+        if not (password and host and port): return None
+        
+        return {
+            "protocol": "trojan",
+            "settings": {
+                "servers": [{"address": host, "port": port, "password": password}]
+            }
+        }
+    except Exception:
+        return None
+
+def parse_ss(link):
+    """Parse ss://base64(method:password)@host:port"""
+    try:
+        # ss://BASE64@HOST:PORT
+        # or ss://method:pass@host:port
+        data = link[5:]
+        if '@' not in data: return None
+        
+        user_info, host_info = data.rsplit('@', 1)
+        
+        # Try generic decode
+        try:
+            # Fix padding
+            padding = len(user_info) % 4
+            if padding: user_info += '=' * (4 - padding)
+            decoded_user = base64.urlsafe_b64decode(user_info).decode('utf-8')
+            if ':' in decoded_user:
+                method, password = decoded_user.split(':', 1)
+            else:
+                return None
+        except:
+             # Maybe it's plain text ss://method:pass@...
+             if ':' in user_info:
+                 method, password = user_info.split(':', 1)
+             else:
+                 return None
+
+        host, port_str = host_info.split(':', 1)
+        # remove tag if present
+        if '#' in port_str: port_str = port_str.split('#')[0]
+        port = int(port_str)
+
+        return {
+            "protocol": "shadowsocks",
+            "settings": {
+                "servers": [{"address": host, "port": port, "method": method, "password": password}]
+            }
+        }
+    except Exception:
+        return None
+
+def generate_config(outbound, local_port):
+    return {
+        "log": {"loglevel": "none"},
+        "inbounds": [{
+            "port": local_port,
+            "listen": "127.0.0.1",
+            "protocol": "socks",
+            "settings": {"udp": True}
+        }],
+        "outbounds": [outbound]
+    }
+
+def check_proxy(link, thread_id):
+    """Checks a single proxy link."""
+    local_port = BASE_PORT + thread_id
+    config_file = f"config_{local_port}.json"
+    
+    # 1. Parse
+    outbound = None
+    if link.startswith("vmess://"): outbound = parse_vmess(link)
+    elif link.startswith("vless://"): outbound = parse_vless(link)
+    elif link.startswith("trojan://"): outbound = parse_trojan(link)
+    elif link.startswith("ss://"): outbound = parse_ss(link)
+    
+    if not outbound:
+        return False, link
+
+    # 2. Write Config
+    config = generate_config(outbound, local_port)
+    with open(config_file, 'w') as f:
+        json.dump(config, f)
+        
+    # 3. Start Xray
+    # We use a subprocess. Popen allows us to kill it later.
+    try:
+        proc = subprocess.Popen([XRAY_BIN, "run", "-c", config_file], stdout=subprocess.DEVNULL, stderr=subprocess.PIPE)
+        
+        # Give it a moment to start
+        time.sleep(0.5)
+        
+        # Check if process is still running
+        if proc.poll() is not None:
+            # It died
+            stderr = proc.stderr.read().decode('utf-8', errors='ignore')
+            if thread_id == 0: # Print only first thread error to avoid spam
+                print(f"[DEBUG] Xray died immediately. Stderr: {stderr[:200]}")
+            success = False
         else:
             # 4. Curl check
             # curl -x socks5h://127.0.0.1:PORT
@@ -40,10 +230,6 @@ BASE_PORT = 20000
                     success = True
                 else:
                     success = False
-                    # Debug curl failure occasionally - silenced
-                    if thread_id == 0 and random.random() < 0.05:
-                         pass
-                         # print(f"[DEBUG] Curl failed. Return: {result.returncode}, Stdout len: {len(result.stdout)}")
             except Exception:
                 success = False
             
@@ -86,11 +272,9 @@ def fetch_proxies():
             if resp.status_code == 200:
                 content = resp.text
                 
-                # Check for "Mojibake" or base64 decoding if needed (skipped as file seems plain or line-based)
-                # Some files might be base64 blobs, simple heuristic:
+                # Check for "Mojibake" or base64 decoding if needed
                 if "vless://" not in content and "vmess://" not in content and "trojan://" not in content and "ss://" not in content:
                      try:
-                         # Try decoding entire body
                          decoded = base64.b64decode(content).decode('utf-8')
                          content = decoded
                      except: pass
@@ -170,7 +354,6 @@ def save_distributed(proxies):
         for idx, proxy in enumerate(unique_new_proxies):
             file_idx = (idx % TOTAL_OUTPUT_LISTS) + 1
             files[file_idx].write(proxy + "\n")
-            # Update local set to prevent dupes within this batch if any (though input 'proxies' is already unique)
             
     finally:
         for f in files.values():
@@ -180,13 +363,8 @@ def save_distributed(proxies):
 
 def save_general(proxies):
     # Save all found proxies to a single general list
-    # We append to it, but we could also deduplicate against it if we read it first.
-    # For simplicity and speed, let's just append updates.
-    
     if not proxies: return
 
-    # Simple deduplication against file content could be expensive if large, 
-    # but let's try to be clean.
     existing = set()
     if os.path.exists(RESULTS_FILE):
         try:
@@ -214,10 +392,7 @@ def main():
     start_time = time.time()
     
     if not shutil.which(XRAY_BIN) and not os.path.exists(XRAY_BIN):
-        # On Github Actions or Linux, we might need to download xray if not present
         pass
-        # print(f"Error: {XRAY_BIN} not found. Please install Xray-core.")
-        # sys.exit(1)
 
     # 1. Load Proxies (Queue + Fetch)
     queue_links = load_queue()
@@ -229,20 +404,15 @@ def main():
     # ----------------------------------------------------
     # DEDUPLICATION AGAINST EXISTING RESULTS
     # ----------------------------------------------------
-    # We want to avoid checking proxies we ALREADY have in our lists (list_1..20.txt)
-    # This prevents the list from growing with duplicates every run.
-    
     print("Loading existing proxies to skip duplicates...")
     existing_proxies = set()
-    # Check general list
     if os.path.exists(RESULTS_FILE):
         try:
              with open(RESULTS_FILE, 'r') as f:
                  for line in f: existing_proxies.add(line.strip())
         except: pass
 
-    # Check distributed lists
-    for i in range(1, 21): # Assuming 20 lists max (can be dynamic or constant)
+    for i in range(1, 21):
         fname = f"proxy_lists/list_{i}.txt"
         if os.path.exists(fname):
             try:
@@ -254,10 +424,10 @@ def main():
     all_links = [l for l in all_links if l not in existing_proxies]
     print(f"Deduplication: Removed {original_count - len(all_links)} proxies already in lists. Remaining: {len(all_links)}")
 
-    # Shuffle for randomness
+    # Shuffle
     random.shuffle(all_links)
     
-    # Cap total proxies to check to prevent extreme runtimes or memory usage
+    # Cap total proxies
     if len(all_links) > 10000:
         print(f"Capping total proxies from {len(all_links)} to 10000.")
         all_links = all_links[:10000]
@@ -269,13 +439,10 @@ def main():
 
     working_proxies = []
     checked_count = 0
-    
     remaining_links = []
     
     with ThreadPoolExecutor(max_workers=MAX_THREADS) as executor:
-        # Create a dict to map future to link
         future_to_link = {}
-        
         link_iterator = iter(all_links)
         exhausted = False
         
@@ -298,16 +465,8 @@ def main():
             if not future_to_link:
                 break
                 
-            # Process completed (with time check in loop)
-            # We use a trick to poll: wait small amount or just check done
-            
-            # Simple check: peek at futures
-            if not future_to_link:
-                break
-                
             # Wait for at least one, with timeout
             try:
-                # Get the first completed from the current set
                 for future in as_completed(future_to_link.keys(), timeout=1):
                     result_success, result_link = future.result()
                     checked_count += 1
@@ -318,22 +477,17 @@ def main():
                     
                     del future_to_link[future]
                     
-                    # Exit conditions
                     if len(working_proxies) >= TARGET_WORKING_COUNT:
                         break
                     if time.time() - start_time > MAX_RUNTIME:
                         break
             except Exception:
-                # Timeout on as_completed (no proxy finished in 1s), just continue loop to check time
                 pass
 
             if len(working_proxies) >= TARGET_WORKING_COUNT:
                 print("Target working count reached.")
                 break
             
-        # Collect remaining from iterator
-        current_processing = list(future_to_link.values()) 
-        # Recover unchecked links from futures (if we didn't wait for them)
         remaining_links = list(future_to_link.values()) + list(link_iterator)
             
     # Save Results
@@ -341,14 +495,12 @@ def main():
         save_distributed(working_proxies)
         save_general(working_proxies)
 
-    # Save Queue State (unchecked proxies)
+    # Save Queue State
     if not remaining_links and exhausted and not future_to_link:
         print("Queue exhausted. Deleting queue file to fetch fresh next time.")
         if os.path.exists(QUEUE_FILE):
             os.remove(QUEUE_FILE)
     else:
-        # Check specific condition: if we found some working but ran out of time, 
-        # we still want to continue checking the rest next time
         save_queue(remaining_links)
 
 if __name__ == "__main__":

@@ -391,6 +391,12 @@ def save_general(proxies):
 def main():
     start_time = time.time()
     
+    # Check for recheck mode
+    recheck_mode = "--recheck" in sys.argv
+    if recheck_mode:
+        print("!!! RECHECK MODE ENABLED !!!")
+        print("Will re-verify ALL existing proxies and invalid ones will be removed.")
+
     if not shutil.which(XRAY_BIN) and not os.path.exists(XRAY_BIN):
         pass
 
@@ -398,14 +404,14 @@ def main():
     queue_links = load_queue()
     fetched_links = fetch_proxies()
     
-    # Combine and deduplicate
+    # Combine
     all_links = list(set(queue_links + fetched_links))
     
     # ----------------------------------------------------
-    # DEDUPLICATION AGAINST EXISTING RESULTS
+    # LOAD EXISTING PROXIES
     # ----------------------------------------------------
-    print("Loading existing proxies to skip duplicates...")
     existing_proxies = set()
+    
     if os.path.exists(RESULTS_FILE):
         try:
              with open(RESULTS_FILE, 'r') as f:
@@ -419,10 +425,36 @@ def main():
                 with open(fname, 'r') as f:
                     for line in f: existing_proxies.add(line.strip())
             except: pass
+
+    # ----------------------------------------------------
+    # DEDUPLICATION vs RECHECK LOGIC
+    # ----------------------------------------------------
+    if recheck_mode:
+        print(f"Loaded {len(existing_proxies)} existing proxies for re-verification.")
+        # In recheck mode, we ADD existing proxies to the check list
+        all_links.extend(list(existing_proxies))
+        # Remove duplicates within the list itself
+        all_links = list(set(all_links))
+        
+        # CLEAR OLD FILES so we can overwrite only with working ones
+        print("Clearing old result files...")
+        if os.path.exists(RESULTS_FILE):
+            try: os.remove(RESULTS_FILE)
+            except: pass
+        
+        if os.path.exists("proxy_lists"):
+            try: shutil.rmtree("proxy_lists")
+            except: pass
+        os.makedirs("proxy_lists", exist_ok=True)
+        
+    else:
+        # Normal mode: Skip proxies that are already known
+        print("Loading existing proxies to skip duplicates...")
+        # existing_proxies set is already populated above
             
-    original_count = len(all_links)
-    all_links = [l for l in all_links if l not in existing_proxies]
-    print(f"Deduplication: Removed {original_count - len(all_links)} proxies already in lists. Remaining: {len(all_links)}")
+        original_count = len(all_links)
+        all_links = [l for l in all_links if l not in existing_proxies]
+        print(f"Deduplication: Removed {original_count - len(all_links)} proxies already in lists. Remaining: {len(all_links)}")
 
     # Shuffle
     random.shuffle(all_links)

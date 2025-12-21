@@ -262,7 +262,14 @@ def fetch_proxies():
         "https://raw.githubusercontent.com/sevcator/5ubscrpt10n/main/protocols/vl.txt",
         "https://raw.githubusercontent.com/sevcator/5ubscrpt10n/main/protocols/vm.txt",
         "https://raw.githubusercontent.com/sevcator/5ubscrpt10n/main/protocols/tr.txt",
-        "https://raw.githubusercontent.com/sevcator/5ubscrpt10n/main/protocols/ss.txt"
+        "https://raw.githubusercontent.com/sevcator/5ubscrpt10n/main/protocols/ss.txt",
+        
+        # New High-Volume Sources
+        "https://raw.githubusercontent.com/Epodonios/v2ray-configs/main/All_Configs_Sub.txt",
+        "https://raw.githubusercontent.com/barry-far/V2ray-Configs/main/All_Configs_Sub.txt",
+        "https://raw.githubusercontent.com/ebrasha/free-v2ray-public-list/master/all.txt",
+        "https://raw.githubusercontent.com/mahdibland/V2RayAggregator/master/sub/sub_merge.txt",
+        "https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/normal/mix"
     ]
     
     for url in urls:

@@ -19,7 +19,7 @@ MAX_THREADS = 200 # Faster scraping
 BASE_PORT = 20000
 
 # Staged Execution Config
-TARGET_WORKING_COUNT = 50000 # Stop after finding this many working proxies
+TARGET_WORKING_COUNT = 100000 # Stop after finding this many working proxies
 MAX_RUNTIME = 1750 # Seconds (approx 29 mins) to match 30m schedule
 QUEUE_FILE = "proxies_queue.txt" # File to store unchecked proxies
 RESULTS_FILE = "proxy_list_found.txt" # File to store working proxies (appended or overwritten)
@@ -265,11 +265,7 @@ def fetch_proxies():
         "https://raw.githubusercontent.com/sevcator/5ubscrpt10n/main/protocols/ss.txt",
         
         # New High-Volume Sources
-        "https://raw.githubusercontent.com/Epodonios/v2ray-configs/main/All_Configs_Sub.txt",
-        "https://raw.githubusercontent.com/barry-far/V2ray-Configs/main/All_Configs_Sub.txt",
-        "https://raw.githubusercontent.com/ebrasha/free-v2ray-public-list/master/all.txt",
-        "https://raw.githubusercontent.com/mahdibland/V2RayAggregator/master/sub/sub_merge.txt",
-        "https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/normal/mix"
+        "https://raw.githubusercontent.com/mahdibland/V2RayAggregator/master/sub/sub_merge.txt"
     ]
     
     for url in urls:
@@ -467,9 +463,10 @@ def main():
     random.shuffle(all_links)
     
     # Cap total proxies
-    if len(all_links) > 50000:
-        print(f"Capping total proxies from {len(all_links)} to 50000.")
-        all_links = all_links[:50000]
+    # Cap total proxies
+    if len(all_links) > 100000:
+        print(f"Capping total proxies from {len(all_links)} to 100000.")
+        all_links = all_links[:100000]
     
     print(f"Total proxies to check: {len(all_links)}")
     if len(all_links) == 0:

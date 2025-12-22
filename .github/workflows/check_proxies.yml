@@ -2,7 +2,7 @@ name: Proxy Checker
 
 on:
   schedule:
-    - cron: '*/30 * * * *' # Run every 30 minutes
+    - cron: '0 * * * *' # Run every hour
   workflow_dispatch:      # Allow manual trigger
 
 concurrency:
@@ -58,6 +58,9 @@ jobs:
           echo "No changes to commit."
         else
           git commit -m "Update proxies [$(date)]"
-          git pull --rebase origin main
+          # Pull with rebase, favoring the current run's changes (theirs in rebase context means the applied commit)
+          # Actually in rebase: 'ours' is upstream, 'theirs' is us. check_proxies.yml runs on the runner.
+          # We want to keep the NEW proxies we just found.
+          git pull --rebase -Xtheirs origin main
           git push
         fi

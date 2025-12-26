@@ -19,8 +19,8 @@ MAX_THREADS = 200 # Faster scraping
 BASE_PORT = 20000
 
 # Staged Execution Config
-TARGET_WORKING_COUNT = 100000 # Stop after finding this many working proxies
-MAX_RUNTIME = 2700 # Seconds (45 mins) to match 60m schedule
+TARGET_WORKING_COUNT = 50000 # Stop after finding this many working proxies
+MAX_RUNTIME = 1750 # Seconds (approx 29 mins) to match 30m schedule
 QUEUE_FILE = "proxies_queue.txt" # File to store unchecked proxies
 RESULTS_FILE = "proxy_list_found.txt" # File to store working proxies (appended or overwritten)
 TOTAL_OUTPUT_LISTS = 5 # Number of separate lists to distribute proxies into
@@ -165,6 +165,17 @@ def parse_ss(link):
     except Exception:
         return None
 
+def parse_http(link):
+    """Parse http:// or https:// link."""
+    try:
+        parse = urllib.parse.urlparse(link)
+        if parse.scheme not in ["http", "https"]: return None
+        if not parse.hostname or not parse.port: return None
+        # Return the original link or cleaned version for curl -x
+        return {"protocol": parse.scheme, "link": link}
+    except Exception:
+        return None
+
 def generate_config(outbound, local_port):
     return {
         "log": {"loglevel": "none"},
@@ -184,57 +195,76 @@ def check_proxy(link, thread_id):
     
     # 1. Parse
     outbound = None
+    is_direct_check = False
+    proxy_type = ""
+    
     if link.startswith("vmess://"): outbound = parse_vmess(link)
     elif link.startswith("vless://"): outbound = parse_vless(link)
     elif link.startswith("trojan://"): outbound = parse_trojan(link)
     elif link.startswith("ss://"): outbound = parse_ss(link)
+    elif link.startswith("http://") or link.startswith("https://"):
+        outbound = parse_http(link)
+        is_direct_check = True
+        proxy_type = "http"
+    elif link.startswith("socks5://"):
+        # We can reuse parse_http logic for socks5:// URL structure
+        outbound = parse_http(link.replace("socks5://", "http://"))
+        is_direct_check = True
+        proxy_type = "socks5"
     
     if not outbound:
         return False, link
 
+    success = False
+    
+    # CASE A: Direct proxy check (HTTP or SOCKS5)
+    if is_direct_check:
+        curl_proxy = link
+        if proxy_type == "socks5":
+            # For socks5 we use socks5h:// to resolve DNS through proxy
+            curl_proxy = link.replace("socks5://", "socks5h://")
+            
+        chk_cmd = [
+            "curl", "-s", "--connect-timeout", "5", "--max-time", "10",
+            "-x", curl_proxy,
+            CHECK_URL
+        ]
+        try:
+            result = subprocess.run(chk_cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+            if result.returncode == 0 and len(result.stdout) > 6:
+                success = True
+        except Exception:
+            success = False
+        return success, link
+
+    # CASE B: Xray-based proxy
     # 2. Write Config
     config = generate_config(outbound, local_port)
     with open(config_file, 'w') as f:
         json.dump(config, f)
         
     # 3. Start Xray
-    # We use a subprocess. Popen allows us to kill it later.
     try:
         proc = subprocess.Popen([XRAY_BIN, "run", "-c", config_file], stdout=subprocess.DEVNULL, stderr=subprocess.PIPE)
-        
-        # Give it a moment to start
         time.sleep(0.5)
         
-        # Check if process is still running
         if proc.poll() is not None:
-            # It died
-            stderr = proc.stderr.read().decode('utf-8', errors='ignore')
-            if thread_id == 0: # Print only first thread error to avoid spam
-                print(f"[DEBUG] Xray died immediately. Stderr: {stderr[:200]}")
             success = False
         else:
-            # 4. Curl check
-            # curl -x socks5h://127.0.0.1:PORT
+            # 4. Curl check via socks
             chk_cmd = [
                 "curl", "-s", "--connect-timeout", "5", "--max-time", "8",
                 "-x", f"socks5h://127.0.0.1:{local_port}",
                 CHECK_URL
             ]
-            
             try:
-                # We look for a 200 OK or just successful exit code with body content
                 result = subprocess.run(chk_cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-                # checkip.amazonaws.com returns just an IP (e.g. 12 chars). 100 bytes is too much.
                 if result.returncode == 0 and len(result.stdout) > 6:
-                    # Valid IP is at least 7 chars (1.1.1.1), allow loose > 6
                     success = True
-                else:
-                    success = False
             except Exception:
                 success = False
             
     except Exception as e:
-        print(f"[DEBUG] Exception checking proxy: {e}")
         success = False
     finally:
         # Cleanup
@@ -246,8 +276,7 @@ def check_proxy(link, thread_id):
                 proc.kill()
         
         if os.path.exists(config_file):
-            try:
-                os.remove(config_file)
+            try: os.remove(config_file)
             except: pass
             
     return success, link
@@ -257,25 +286,32 @@ def fetch_proxies():
     print("Fetching new proxies from sources...")
     links = set()
     
-    # 4 sources requested by user
-    urls = [
+    # Valid V2Ray/SS sources
+    v2ray_urls = [
         "https://raw.githubusercontent.com/sevcator/5ubscrpt10n/main/protocols/vl.txt",
         "https://raw.githubusercontent.com/sevcator/5ubscrpt10n/main/protocols/vm.txt",
         "https://raw.githubusercontent.com/sevcator/5ubscrpt10n/main/protocols/tr.txt",
         "https://raw.githubusercontent.com/sevcator/5ubscrpt10n/main/protocols/ss.txt",
-        
-        # New High-Volume Sources
+        "https://raw.githubusercontent.com/Epodonios/v2ray-configs/main/All_Configs_Sub.txt",
         "https://raw.githubusercontent.com/mahdibland/V2RayAggregator/master/sub/sub_merge.txt"
     ]
     
-    for url in urls:
-        print(f"Fetching {url}")
+    # Plain HTTP sources (treated as HTTP)
+    plain_http_urls = [
+        "https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/http.txt"
+    ]
+    
+    # Plain SOCKS5 sources (treated as SOCKS5)
+    plain_socks5_urls = [
+        "https://raw.githubusercontent.com/TheSpeedX/SOCKS-List/master/socks5.txt"
+    ]
+    
+    for url in v2ray_urls:
+        print(f"Fetching V2Ray/SS: {url}")
         try:
             resp = requests.get(url, timeout=15)
             if resp.status_code == 200:
                 content = resp.text
-                
-                # Check for "Mojibake" or base64 decoding if needed
                 if "vless://" not in content and "vmess://" not in content and "trojan://" not in content and "ss://" not in content:
                      try:
                          decoded = base64.b64decode(content).decode('utf-8')
@@ -288,8 +324,41 @@ def fetch_proxies():
                         line.startswith("vless://") or
                         line.startswith("vmess://") or
                         line.startswith("trojan://") or
-                        line.startswith("ss://")
+                        line.startswith("ss://") or
+                        line.startswith("http://") or
+                        line.startswith("https://") or
+                        line.startswith("socks5://")
                     ):
+                        links.add(line)
+        except Exception as e:
+            print(f"Failed to fetch {url}: {e}")
+
+    for url in plain_http_urls:
+        print(f"Fetching Plain HTTP: {url}")
+        try:
+            resp = requests.get(url, timeout=15)
+            if resp.status_code == 200:
+                for line in resp.text.splitlines():
+                    line = line.strip()
+                    if not line: continue
+                    if re.match(r'^\d+\.\d+\.\d+\.\d+:\d+$', line):
+                        links.add("http://" + line)
+                    elif line.startswith("http"):
+                        links.add(line)
+        except Exception as e:
+            print(f"Failed to fetch {url}: {e}")
+
+    for url in plain_socks5_urls:
+        print(f"Fetching Plain SOCKS5: {url}")
+        try:
+            resp = requests.get(url, timeout=15)
+            if resp.status_code == 200:
+                for line in resp.text.splitlines():
+                    line = line.strip()
+                    if not line: continue
+                    if re.match(r'^\d+\.\d+\.\d+\.\d+:\d+$', line):
+                        links.add("socks5://" + line)
+                    elif line.startswith("socks5"):
                         links.add(line)
         except Exception as e:
             print(f"Failed to fetch {url}: {e}")
@@ -307,7 +376,10 @@ def load_queue():
                         l.startswith("vless://") or 
                         l.startswith("vmess://") or
                         l.startswith("trojan://") or
-                        l.startswith("ss://")
+                        l.startswith("ss://") or
+                        l.startswith("http://") or
+                        l.startswith("https://") or
+                        l.startswith("socks5://")
                     ):
                         lines.append(l)
             if lines:
@@ -463,10 +535,9 @@ def main():
     random.shuffle(all_links)
     
     # Cap total proxies
-    # Cap total proxies
-    if len(all_links) > 100000:
-        print(f"Capping total proxies from {len(all_links)} to 100000.")
-        all_links = all_links[:100000]
+    if len(all_links) > 50000:
+        print(f"Capping total proxies from {len(all_links)} to 50000.")
+        all_links = all_links[:50000]
     
     print(f"Total proxies to check: {len(all_links)}")
     if len(all_links) == 0:

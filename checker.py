@@ -534,11 +534,6 @@ def main():
     # Shuffle
     random.shuffle(all_links)
     
-    # Cap total proxies
-    if len(all_links) > 50000:
-        print(f"Capping total proxies from {len(all_links)} to 50000.")
-        all_links = all_links[:50000]
-    
     print(f"Total proxies to check: {len(all_links)}")
     if len(all_links) == 0:
         print("No NEW proxies to check (all found are duplicates).")
@@ -605,11 +600,19 @@ def main():
         save_distributed(working_proxies)
         save_general(working_proxies)
 
-    # Save Queue State (unchecked proxies from Pass 1)
-    if not remaining_links and exhausted and not future_to_link:
-         pass # Queue exhausted
+    # Save Queue State (Everything we DID NOT check)
+    # This includes:
+    # 1. Links still in the future_to_link pool (didn't finish)
+    # 2. Links still in the iterator (never started)
+    all_remaining = list(future_to_link.values()) + list(link_iterator)
+    if all_remaining:
+        save_queue(all_remaining)
     else:
-         save_queue(remaining_links)
+        # If queue is empty, remove file
+        if os.path.exists(QUEUE_FILE):
+            try: os.remove(QUEUE_FILE)
+            except: pass
+        print("Queue fully processed and cleared.")
 
 
     # ----------------------------------------------------

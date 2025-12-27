@@ -20,7 +20,7 @@ BASE_PORT = 20000
 
 # Staged Execution Config
 TARGET_WORKING_COUNT = 50000 # Stop after finding this many working proxies
-MAX_RUNTIME = 1750 # Seconds (approx 29 mins) to match 30m schedule
+MAX_RUNTIME = 3000 # Seconds (approx 29 mins) to match 30m schedule
 QUEUE_FILE = "proxies_queue.txt" # File to store unchecked proxies
 RESULTS_FILE = "proxy_list_found.txt" # File to store working proxies (appended or overwritten)
 TOTAL_OUTPUT_LISTS = 5 # Number of separate lists to distribute proxies into

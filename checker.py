@@ -20,7 +20,7 @@ BASE_PORT = 20000
 
 # Staged Execution Config
 TARGET_WORKING_COUNT = 50000 # Stop after finding this many working proxies
-MAX_RUNTIME = 3000 # Seconds (approx 29 mins) to match 30m schedule
+MAX_RUNTIME = 1750 # Seconds (approx 29 mins) to match 30m schedule
 QUEUE_FILE = "proxies_queue.txt" # File to store unchecked proxies
 RESULTS_FILE = "proxy_list_found.txt" # File to store working proxies (appended or overwritten)
 TOTAL_OUTPUT_LISTS = 5 # Number of separate lists to distribute proxies into
@@ -502,62 +502,29 @@ def main():
             except: pass
 
     # ----------------------------------------------------
-    # DEDUPLICATION vs RECHECK LOGIC
+    # PHASE 1: MAINTENANCE (Re-verify existing list)
     # ----------------------------------------------------
-    if recheck_mode:
-        print(f"Loaded {len(existing_proxies)} existing proxies for re-verification.")
-        # In recheck mode, we ADD existing proxies to the check list
-        all_links.extend(list(existing_proxies))
-        # Remove duplicates within the list itself
-        all_links = list(set(all_links))
-        
-        # CLEAR OLD FILES so we can overwrite only with working ones
-        print("Clearing old result files...")
-        if os.path.exists(RESULTS_FILE):
-            try: os.remove(RESULTS_FILE)
-            except: pass
-        
-        if os.path.exists("proxy_lists"):
-            try: shutil.rmtree("proxy_lists")
-            except: pass
-        os.makedirs("proxy_lists", exist_ok=True)
-        
-    else:
-        # Normal mode: Skip proxies that are already known
-        print("Loading existing proxies to skip duplicates...")
-        # existing_proxies set is already populated above
-            
-        original_count = len(all_links)
-        all_links = [l for l in all_links if l not in existing_proxies]
-        print(f"Deduplication: Removed {original_count - len(all_links)} proxies already in lists. Remaining: {len(all_links)}")
-
-    # Shuffle
-    random.shuffle(all_links)
+    print(f"\n=== PHASE 1: RE-VERIFYING {len(existing_proxies)} EXISTING PROXIES ===")
     
-    print(f"Total proxies to check: {len(all_links)}")
-    if len(all_links) == 0:
-        print("No NEW proxies to check (all found are duplicates).")
-        return
-
-    working_proxies = []
-    checked_proxies_set = set() # Track what we've touched to avoid double-checking
+    verified_existing = []
     checked_count = 0
-    remaining_links = []
-    
-    # PASS 1: Check New/Queue Proxies
-    print("\n=== STARTING PASS 1: CHECKING NEW PROXIES ===")
+    checked_proxies_set = set() # Track for final Pass 2 filtering
+
+    # If in recheck_mode, we use ALL existing. 
+    # If not, we still check them first to keep things clean.
+    to_reverify = list(existing_proxies)
+    random.shuffle(to_reverify)
+
     with ThreadPoolExecutor(max_workers=MAX_THREADS) as executor:
         future_to_link = {}
-        link_iterator = iter(all_links)
+        link_iterator = iter(to_reverify)
         exhausted = False
         
-        while len(working_proxies) < TARGET_WORKING_COUNT and not exhausted:
-            # Check Time Limit
+        while not exhausted:
             if time.time() - start_time > MAX_RUNTIME:
-                print(f"Time limit reached ({MAX_RUNTIME}s). Stopping early.")
+                print(f"Time limit reached ({MAX_RUNTIME}s) during maintenance. Stopping Pass 1.")
                 break
 
-            # Fill up the pool
             while len(future_to_link) < MAX_THREADS * 2:
                 try:
                     link = next(link_iterator)
@@ -567,8 +534,7 @@ def main():
                     exhausted = True
                     break
             
-            if not future_to_link:
-                break
+            if not future_to_link: break
                 
             try:
                 for future in as_completed(future_to_link.keys(), timeout=1):
@@ -577,159 +543,90 @@ def main():
                     checked_proxies_set.add(result_link)
                     
                     if result_success:
-                        working_proxies.append(result_link)
-                        print(f"[{len(working_proxies)}/{TARGET_WORKING_COUNT}] FOUND: {result_link[:30]}...")
+                        verified_existing.append(result_link)
                     
                     del future_to_link[future]
-                    
-                    if len(working_proxies) >= TARGET_WORKING_COUNT:
-                        break
-                    if time.time() - start_time > MAX_RUNTIME:
-                        break
-            except Exception:
-                pass
-
-            if len(working_proxies) >= TARGET_WORKING_COUNT:
-                print("Target working count reached.")
-                break
-            
-        remaining_links = list(future_to_link.values()) + list(link_iterator)
-
-    # Save Results from Pass 1 (Append)
-    if working_proxies:
-        save_distributed(working_proxies)
-        save_general(working_proxies)
-
-    # Save Queue State (Everything we DID NOT check)
-    # This includes:
-    # 1. Links still in the future_to_link pool (didn't finish)
-    # 2. Links still in the iterator (never started)
-    all_remaining = list(future_to_link.values()) + list(link_iterator)
-    if all_remaining:
-        save_queue(all_remaining)
-    else:
-        # If queue is empty, remove file
-        if os.path.exists(QUEUE_FILE):
-            try: os.remove(QUEUE_FILE)
+                    if time.time() - start_time > MAX_RUNTIME: break
             except: pass
-        print("Queue fully processed and cleared.")
 
+    # If we finished Phase 1 OR if we want to update the file with what we found so far
+    print(f"Maintenance finished. Found {len(verified_existing)} valid out of {len(checked_proxies_set)} checked.")
+    
+    # Overwrite files with verified ones (if we checked ANY, we should probably update)
+    if checked_proxies_set:
+        print("Updating result files with verified proxies...")
+        if os.path.exists(RESULTS_FILE): os.remove(RESULTS_FILE)
+        if os.path.exists("proxy_lists"): shutil.rmtree("proxy_lists")
+        os.makedirs("proxy_lists", exist_ok=True)
+        
+        save_distributed(verified_existing)
+        save_general(verified_existing)
 
     # ----------------------------------------------------
-    # PASS 2: OPPORTUNISTIC RECHECK (If time remains)
+    # PHASE 2: EXPANSION (Check new proxies from queue/sources)
     # ----------------------------------------------------
     elapsed = time.time() - start_time
-    buffer_time = 300 # 5 minutes
-    
-    # Only run if we have time AND we aren't already in full recheck mode (which does this anyway)
-    if not recheck_mode and (elapsed < (MAX_RUNTIME - buffer_time)):
-        remaining_time = MAX_RUNTIME - elapsed
-        print(f"\n=== TIME REMAINS ({int(remaining_time)}s) ===")
-        print("Starting Opportunistic Recheck of existing list...")
-        
-        # 1. Load all existing proxies again
-        recheck_candidates = set()
-        if os.path.exists(RESULTS_FILE):
-            try:
-                 with open(RESULTS_FILE, 'r') as f:
-                     for line in f: recheck_candidates.add(line.strip())
-            except: pass
-            
-        for i in range(1, 21):
-            fname = f"proxy_lists/list_{i}.txt"
-            if os.path.exists(fname):
-                try:
-                    with open(fname, 'r') as f:
-                        for line in f: recheck_candidates.add(line.strip())
-                except: pass
-        
-        # 2. Filter out what we ALREADY checked in Pass 1
-        # (This includes newly found ones that are now in the file, and ones we tried and failed)
-        to_recheck = [p for p in recheck_candidates if p not in checked_proxies_set]
-        random.shuffle(to_recheck)
-        
-        print(f"Found {len(recheck_candidates)} total existing. Rechecking {len(to_recheck)} (skipping {len(checked_proxies_set)} recently checked).")
-        
-        if to_recheck:
-            verified_existing = []
-            
-            # We need to preserve the NEW working proxies we just found in Pass 1
-            # But we will overwrite the files, so we start with them.
-            final_good_proxies = list(working_proxies) 
-            
-            with ThreadPoolExecutor(max_workers=MAX_THREADS) as executor:
-                future_to_link = {}
-                link_iterator = iter(to_recheck)
-                exhausted = False
-                
-                while True:
-                    if time.time() - start_time > MAX_RUNTIME:
-                        print("Time limit reached during recheck. Stopping.")
-                        break
-                        
-                    while len(future_to_link) < MAX_THREADS * 2:
-                        try:
-                            link = next(link_iterator)
-                            future = executor.submit(check_proxy, link, len(future_to_link) % MAX_THREADS)
-                            future_to_link[future] = link
-                        except StopIteration:
-                            exhausted = True
-                            break
-                            
-                    if not future_to_link:
-                        break
-                        
-                    try:
-                        for future in as_completed(future_to_link.keys(), timeout=1):
-                            result_success, result_link = future.result()
-                            checked_proxies_set.add(result_link)
-                            
-                            if result_success:
-                                verified_existing.append(result_link)
-                                final_good_proxies.append(result_link)
-                                # Optional: Print less frequently for recheck
-                                # print(f"  [Recheck] Verified: {result_link[:20]}...")
-                            
-                            del future_to_link[future]
-                            
-                            if time.time() - start_time > MAX_RUNTIME:
-                                break
-                    except: pass
-            
-            # 3. SAVE OVERWRITE
-            # We have 'final_good_proxies' which contains:
-            #  - Working proxies from Pass 1 (New)
-            #  - Working proxies from Pass 2 (Old/Rechecked)
-            # IMPORTANT: We did NOT recheck proxies in 'checked_proxies_set' that were in the file but skipped?
-            # Wait, if we skipped them in Pass 2, it means we checked them in Pass 1. 
-            # If they were in Pass 1 and failed, they are NOT in 'working_proxies'.
-            # If they were in Pass 1 and succeeded, they ARE in 'working_proxies'.
-            # So 'final_good_proxies' covers everything we touched.
-            # BUT: What about proxies in file that we didn't touch because we ran out of time in Pass 2?
-            # IF we run out of time, we shouldn't delete the unchecked ones!
-            
-            if exhausted and not future_to_link:
-                # We finished checking EVERYTHING. We can safely overwrite.
-                print(f"Recheck COMPLETE. Overwriting files with {len(final_good_proxies)} valid proxies.")
-                
-                # Clear files
-                if os.path.exists(RESULTS_FILE): os.remove(RESULTS_FILE)
-                if os.path.exists("proxy_lists"): shutil.rmtree("proxy_lists")
-                
-                save_distributed(final_good_proxies)
-                save_general(final_good_proxies)
-            else:
-                # We ran out of time mid-recheck. We cannot overwrite safely because we'd lose unchecked proxies.
-                # Instead, we should just append the confirmed rechecked ones (duplicates might happen?)
-                # Or better: Just don't overwrite if not complete. 
-                # Ideally, we'd like to remove the specifically FAILED ones.
-                # But simple append is safer than data loss.
-                print("Recheck interrupted (Time Limit). NOT overwriting files to prevent data loss of unchecked proxies.")
-                print(f"Found {len(verified_existing)} valid existing proxies in this partial run.")
-                # We don't save 'verified_existing' because they are already in the file.
-                pass
+    if elapsed > MAX_RUNTIME - 60: # Less than 1 min left
+        print("\nNot enough time left for expansion. Exiting.")
+        return
 
-    print(f"\nDone. Checked total: {len(checked_proxies_set)}")
+    # Filter out what we already checked in Phase 1
+    new_to_check = [l for l in all_links if l not in checked_proxies_set]
+    random.shuffle(new_to_check)
+    
+    print(f"\n=== PHASE 2: CHECKING {len(new_to_check)} NEW PROXIES (Target: {TARGET_WORKING_COUNT}) ===")
+    
+    new_working = []
+    with ThreadPoolExecutor(max_workers=MAX_THREADS) as executor:
+        future_to_link = {}
+        link_iterator = iter(new_to_check)
+        exhausted = False
+        
+        while len(new_working) + len(verified_existing) < TARGET_WORKING_COUNT and not exhausted:
+            if time.time() - start_time > MAX_RUNTIME:
+                print(f"Time limit reached ({MAX_RUNTIME}s). Stopping Pass 2.")
+                break
+
+            while len(future_to_link) < MAX_THREADS * 2:
+                try:
+                    link = next(link_iterator)
+                    future = executor.submit(check_proxy, link, len(future_to_link) % MAX_THREADS)
+                    future_to_link[future] = link
+                except StopIteration:
+                    exhausted = True
+                    break
+            
+            if not future_to_link: break
+                
+            try:
+                for future in as_completed(future_to_link.keys(), timeout=1):
+                    result_success, result_link = future.result()
+                    checked_count += 1
+                    checked_proxies_set.add(result_link)
+                    
+                    if result_success:
+                        new_working.append(result_link)
+                        print(f"[{len(verified_existing) + len(new_working)}/{TARGET_WORKING_COUNT}] FOUND NEW: {result_link[:30]}...")
+                    
+                    del future_to_link[future]
+                    if len(new_working) + len(verified_existing) >= TARGET_WORKING_COUNT: break
+                    if time.time() - start_time > MAX_RUNTIME: break
+            except: pass
+
+    # Append new working ones
+    if new_working:
+        print(f"Expansion found {len(new_working)} new unique proxies.")
+        save_distributed(new_working)
+        save_general(new_working)
+
+    # Save leftovers to queue
+    all_not_touched = list(future_to_link.values()) + list(link_iterator)
+    if all_not_touched:
+        save_queue(all_not_touched)
+    else:
+        if os.path.exists(QUEUE_FILE): os.remove(QUEUE_FILE)
+
+    print(f"\nDone. Checked total: {checked_count}")
 
 if __name__ == "__main__":
     main()

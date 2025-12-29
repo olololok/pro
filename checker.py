@@ -293,7 +293,7 @@ def fetch_proxies():
         "https://raw.githubusercontent.com/sevcator/5ubscrpt10n/main/protocols/tr.txt",
         "https://raw.githubusercontent.com/sevcator/5ubscrpt10n/main/protocols/ss.txt",
         "https://raw.githubusercontent.com/Epodonios/v2ray-configs/main/All_Configs_Sub.txt",
-        "https://raw.githubusercontent.com/mahdibland/V2RayAggregator/master/sub/sub_merge.txt
+        "https://raw.githubusercontent.com/mahdibland/V2RayAggregator/master/sub/sub_merge.txt",
 
     ]
     

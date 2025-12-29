@@ -288,7 +288,6 @@ def fetch_proxies():
     
     # Valid V2Ray/SS sources
     v2ray_urls = [
-        "https://raw.githubusercontent.com/sevcator/5ubscrpt10n/main/protocols/vl.txt",
         "https://raw.githubusercontent.com/Epodonios/v2ray-configs/main/All_Configs_Sub.txt",
         "https://raw.githubusercontent.com/mahdibland/V2RayAggregator/master/sub/sub_merge.txt",
 

@@ -15,12 +15,12 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 XRAY_BIN = "./xray"  # Assumes xray is in current dir
 CHECK_URL = "https://checkip.amazonaws.com" # No captcha, just IP
 TIMEOUT = 10 # Seconds for curl/connect
-MAX_THREADS = 200 # Faster scraping
+MAX_THREADS = 500 # Faster scraping
 BASE_PORT = 20000
 
 # Staged Execution Config
-TARGET_WORKING_COUNT = 50000 # Stop after finding this many working proxies
-MAX_RUNTIME = 3400 # Seconds (approx 29 mins) to match 30m schedule
+TARGET_WORKING_COUNT = 500000 # Stop after finding this many working proxies
+MAX_RUNTIME = 1750 # Seconds (approx 29 mins) to match 30m schedule
 QUEUE_FILE = "proxies_queue.txt" # File to store unchecked proxies
 RESULTS_FILE = "proxy_list_found.txt" # File to store working proxies (appended or overwritten)
 TOTAL_OUTPUT_LISTS = 5 # Number of separate lists to distribute proxies into
@@ -225,7 +225,7 @@ def check_proxy(link, thread_id):
             curl_proxy = link.replace("socks5://", "socks5h://")
             
         chk_cmd = [
-            "curl", "-s", "--connect-timeout", "5", "--max-time", "10",
+            "curl", "-s", "--connect-timeout", "7", "--max-time", "15",
             "-x", curl_proxy,
             CHECK_URL
         ]
@@ -253,7 +253,7 @@ def check_proxy(link, thread_id):
         else:
             # 4. Curl check via socks
             chk_cmd = [
-                "curl", "-s", "--connect-timeout", "5", "--max-time", "8",
+                "curl", "-s", "--connect-timeout", "7", "--max-time", "15",
                 "-x", f"socks5h://127.0.0.1:{local_port}",
                 CHECK_URL
             ]
@@ -293,7 +293,8 @@ def fetch_proxies():
         "https://raw.githubusercontent.com/sevcator/5ubscrpt10n/main/protocols/tr.txt",
         "https://raw.githubusercontent.com/sevcator/5ubscrpt10n/main/protocols/ss.txt",
         "https://raw.githubusercontent.com/Epodonios/v2ray-configs/main/All_Configs_Sub.txt",
-        "https://raw.githubusercontent.com/mahdibland/V2RayAggregator/master/sub/sub_merge.txt"
+        "https://raw.githubusercontent.com/mahdibland/V2RayAggregator/master/sub/sub_merge.txt",
+
     ]
     
     # Plain HTTP sources (treated as HTTP)
